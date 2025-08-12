@@ -1,0 +1,22 @@
+{
+  "cleaning_date": "2025-08-04 22:02:27",
+  "original_records": 801440,
+  "final_records": 793505,
+  "data_retention_pct": 99.0,
+  "quality_improvement": 1.4,
+  "final_quality_score": 98.0,
+  "issues_resolved": {
+    "duplicates_removed": 7935,
+    "future_dates_corrected": 397,
+    "regions_standardized": 20,
+    "outliers_capped": 7834,
+    "negative_quantities_fixed": 0
+  },
+  "validation_results": {
+    "date_range_valid": true,
+    "quantity_valid": true,
+    "amount_valid": false,
+    "regions_valid": true,
+    "no_duplicates": true
+  }
+}

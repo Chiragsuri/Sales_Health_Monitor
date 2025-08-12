@@ -1,0 +1,16 @@
+{
+  "generation_date": "2025-08-02 20:05:36",
+  "customers": 50000,
+  "products": 500,
+  "clean_transactions": 793505,
+  "corrupted_transactions": 801440,
+  "date_range": "2022-01-01 00:00:00 to 2024-12-31 00:00:00",
+  "total_revenue_clean": 469040584.2400001,
+  "data_quality_issues": {
+    "missing_customer_ids": "16041",
+    "duplicate_transactions": 7935,
+    "negative_quantities": "801",
+    "inconsistent_regions": 20,
+    "extreme_outliers": "7912"
+  }
+}

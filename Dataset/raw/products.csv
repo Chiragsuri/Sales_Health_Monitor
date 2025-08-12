@@ -1,0 +1,501 @@
+product_id,product_name,category,price,cost,margin_percent,launch_date
+PROD_0001,Castillo-Diaz Laptop,Electronics,932.32,700.42,24.9,2022-02-07
+PROD_0002,Mitchell-Martin Laptop,Electronics,162.41,133.97,17.5,2021-11-03
+PROD_0003,"Jennings, Hansen and Figueroa Tablet",Electronics,1709.67,1202.21,29.7,2022-01-10
+PROD_0004,"Zhang, Smith and Snow Phone",Electronics,2089.26,1731.06,17.1,2022-07-01
+PROD_0005,Boone and Sons Phone,Electronics,61.34,49.48,19.3,2023-06-03
+PROD_0006,Buckley PLC Phone,Electronics,712.1,512.66,28.0,2022-10-03
+PROD_0007,"Johnson, Martinez and Clark Laptop",Electronics,231.61,190.69,17.7,2021-12-12
+PROD_0008,"Griffin, Flores and Jacobs Speaker",Electronics,562.21,424.25,24.5,2022-12-25
+PROD_0009,Manning-Russell Laptop,Electronics,685.18,552.26,19.4,2023-05-15
+PROD_0010,Everett LLC Speaker,Electronics,1440.81,1195.11,17.1,2022-03-30
+PROD_0011,Miles Ltd Camera,Electronics,1993.69,1422.78,28.6,2024-08-24
+PROD_0012,Barrett and Sons Laptop,Electronics,630.95,453.17,28.2,2020-10-03
+PROD_0013,Wood and Sons Laptop,Electronics,1729.35,1401.96,18.9,2022-02-04
+PROD_0014,Martin-Hudson Laptop,Electronics,1569.11,1099.46,29.9,2023-09-08
+PROD_0015,"Johnson, Herman and Marquez Phone",Electronics,1734.68,1414.56,18.5,2021-09-03
+PROD_0016,Drake and Sons Phone,Electronics,1118.57,809.58,27.6,2024-04-21
+PROD_0017,Jackson PLC Speaker,Electronics,1841.58,1357.66,26.3,2024-05-30
+PROD_0018,"Roberts, Richardson and Collins Speaker",Electronics,223.0,181.73,18.5,2021-11-21
+PROD_0019,Johnson PLC Laptop,Electronics,1708.69,1275.46,25.4,2021-10-02
+PROD_0020,Jones Group Speaker,Electronics,1768.89,1271.0,28.1,2021-04-03
+PROD_0021,"Harris, Miller and Heath Phone",Electronics,1631.32,1329.86,18.5,2023-06-03
+PROD_0022,"Sullivan, Taylor and Sullivan Speaker",Electronics,1302.97,929.16,28.7,2022-07-30
+PROD_0023,Diaz LLC Camera,Electronics,1812.26,1299.36,28.3,2024-08-04
+PROD_0024,"Jensen, Hanson and Lewis Phone",Electronics,824.52,623.38,24.4,2020-12-10
+PROD_0025,"Benitez, Brown and Kent Camera",Electronics,253.96,208.68,17.8,2022-02-27
+PROD_0026,Calhoun-Parker Speaker,Electronics,531.37,390.32,26.5,2021-03-22
+PROD_0027,Stewart-Jackson Tablet,Electronics,1373.77,982.92,28.5,2021-11-17
+PROD_0028,Harrington-Martin Laptop,Electronics,1984.95,1500.33,24.4,2022-03-12
+PROD_0029,"Ellis, Rodriguez and Noble Phone",Electronics,1490.76,1138.66,23.6,2024-05-09
+PROD_0030,"Hernandez, Rasmussen and Gonzales Camera",Electronics,431.37,352.06,18.4,2024-07-01
+PROD_0031,Gross-Munoz Tablet,Electronics,1043.04,756.07,27.5,2021-12-12
+PROD_0032,"Lowe, Wilson and Erickson Tablet",Electronics,653.66,488.07,25.3,2021-09-03
+PROD_0033,"Hendrix, Jones and Byrd Phone",Electronics,2172.28,1543.4,29.0,2020-11-16
+PROD_0034,"Murphy, Martin and Mueller Phone",Electronics,130.4,105.35,19.2,2022-02-09
+PROD_0035,Ritter Ltd Tablet,Electronics,903.54,759.83,15.9,2024-01-14
+PROD_0036,Brown PLC Laptop,Electronics,480.77,408.55,15.0,2021-03-05
+PROD_0037,"Pearson, Roberson and Weaver Laptop",Electronics,2076.14,1500.98,27.7,2021-09-28
+PROD_0038,"Taylor, Jones and Haas Camera",Electronics,2166.1,1784.95,17.6,2022-07-01
+PROD_0039,Williams-Carroll Laptop,Electronics,1730.51,1294.99,25.2,2024-05-27
+PROD_0040,Gonzales-Bradley Tablet,Electronics,633.56,505.69,20.2,2022-04-13
+PROD_0041,"Gonzalez, Cameron and Cameron Tablet",Electronics,621.62,477.47,23.2,2021-11-22
+PROD_0042,Weeks-Lee Speaker,Electronics,787.09,652.08,17.2,2021-10-27
+PROD_0043,"Bailey, Hernandez and Cooper Tablet",Electronics,1813.63,1412.51,22.1,2022-12-26
+PROD_0044,Gonzales-Valencia Laptop,Electronics,1498.56,1182.58,21.1,2023-07-08
+PROD_0045,Anthony-Wheeler Camera,Electronics,1442.45,1096.14,24.0,2023-11-04
+PROD_0046,Diaz PLC Speaker,Electronics,1948.96,1609.23,17.4,2023-06-18
+PROD_0047,Burgess-Shepard Laptop,Electronics,1105.42,792.51,28.3,2021-09-04
+PROD_0048,Webster PLC Camera,Electronics,1714.96,1276.45,25.6,2022-01-19
+PROD_0049,Henderson LLC Laptop,Electronics,1595.07,1274.63,20.1,2023-09-05
+PROD_0050,Smith PLC Speaker,Electronics,275.96,213.7,22.6,2024-03-11
+PROD_0051,"Jackson, Peterson and Lynch Tablet",Electronics,1692.09,1220.46,27.9,2022-05-12
+PROD_0052,Crosby Inc Speaker,Electronics,761.37,646.55,15.1,2021-04-13
+PROD_0053,Campbell-Cortez Tablet,Electronics,819.14,644.02,21.4,2022-11-29
+PROD_0054,"Campbell, Garcia and Mitchell Speaker",Electronics,325.2,228.5,29.7,2022-03-03
+PROD_0055,Morse LLC Phone,Electronics,346.78,275.65,20.5,2021-10-18
+PROD_0056,Graham and Sons Laptop,Electronics,535.09,377.08,29.5,2023-04-11
+PROD_0057,"York, Morris and Harris Laptop",Electronics,562.63,466.85,17.0,2021-01-09
+PROD_0058,West-Barr Phone,Electronics,69.38,58.48,15.7,2022-04-20
+PROD_0059,Thomas Group Tablet,Electronics,1972.58,1381.65,30.0,2020-11-27
+PROD_0060,"Foster, Smith and Frank Laptop",Electronics,750.64,537.58,28.4,2022-04-22
+PROD_0061,"Farmer, Mercado and Willis Phone",Electronics,194.88,163.33,16.2,2022-10-22
+PROD_0062,Morales Inc Laptop,Electronics,916.19,723.52,21.0,2023-06-26
+PROD_0063,Bean LLC Camera,Electronics,1661.86,1196.49,28.0,2023-07-31
+PROD_0064,James and Sons Tablet,Electronics,277.37,227.81,17.9,2022-04-27
+PROD_0065,"Johnson, Oliver and Curtis Camera",Electronics,1185.14,851.47,28.2,2022-01-23
+PROD_0066,"Young, Garcia and Jenkins Tablet",Electronics,349.72,284.29,18.7,2024-08-18
+PROD_0067,Huber LLC Phone,Electronics,1453.34,1039.52,28.5,2023-02-20
+PROD_0068,Garcia-Davis Tablet,Electronics,316.53,261.02,17.5,2020-10-10
+PROD_0069,Jordan Inc Tablet,Electronics,1700.49,1199.03,29.5,2020-11-25
+PROD_0070,Flores LLC Phone,Electronics,1337.01,1069.37,20.0,2023-11-01
+PROD_0071,"Ewing, Ruiz and Lee Tablet",Electronics,1195.06,970.78,18.8,2023-12-08
+PROD_0072,Brown-Smith Laptop,Electronics,920.06,731.02,20.5,2020-11-22
+PROD_0073,Dunn-Young Speaker,Electronics,1892.19,1514.88,19.9,2021-12-21
+PROD_0074,Mccoy Ltd Phone,Electronics,1019.05,759.35,25.5,2021-12-07
+PROD_0075,Dunlap Group Speaker,Electronics,851.38,617.11,27.5,2021-02-24
+PROD_0076,Warren PLC Phone,Electronics,1188.29,944.82,20.5,2023-06-15
+PROD_0077,Hanson and Sons Phone,Electronics,1203.16,986.15,18.0,2023-09-21
+PROD_0078,"Stephenson, Williams and Jordan Camera",Electronics,243.21,202.24,16.8,2022-05-13
+PROD_0079,Faulkner-Jimenez Camera,Electronics,1542.8,1117.48,27.6,2022-05-22
+PROD_0080,Henderson-Perry Tablet,Electronics,813.76,587.83,27.8,2023-05-26
+PROD_0081,"Johnson, Hickman and Payne Speaker",Electronics,358.12,282.39,21.1,2024-04-14
+PROD_0082,"Cruz, Barker and Lopez Phone",Electronics,213.1,172.58,19.0,2021-04-28
+PROD_0083,"West, Cline and Larsen Tablet",Electronics,642.22,460.57,28.3,2021-05-30
+PROD_0084,Li-Grimes Laptop,Electronics,1124.39,890.64,20.8,2021-04-22
+PROD_0085,Cox Ltd Phone,Electronics,162.4,131.72,18.9,2021-06-26
+PROD_0086,Wood-Sanders Laptop,Electronics,1449.94,1029.52,29.0,2021-08-31
+PROD_0087,Pineda-Simmons Tablet,Electronics,1198.92,898.91,25.0,2023-07-14
+PROD_0088,Gonzalez-Becker Camera,Electronics,1479.53,1073.15,27.5,2021-12-17
+PROD_0089,Hunt-Murray Tablet,Electronics,1372.25,1010.86,26.3,2022-11-17
+PROD_0090,"Mccoy, Reynolds and Brown Laptop",Electronics,1729.81,1250.88,27.7,2021-03-25
+PROD_0091,Taylor-Wood Phone,Electronics,1293.47,1012.38,21.7,2022-12-10
+PROD_0092,Lane-Blankenship Speaker,Electronics,687.41,559.65,18.6,2023-04-12
+PROD_0093,Walker-Crawford Tablet,Electronics,1914.11,1607.59,16.0,2022-10-11
+PROD_0094,Smith-Williams Phone,Electronics,359.85,297.02,17.5,2021-12-18
+PROD_0095,"Cox, Harris and Thornton Camera",Electronics,2229.43,1724.94,22.6,2020-09-25
+PROD_0096,"Martin, Nguyen and Fowler Camera",Electronics,1436.16,1073.66,25.2,2022-06-26
+PROD_0097,Carlson LLC Camera,Electronics,1740.47,1281.66,26.4,2022-03-16
+PROD_0098,"Farmer, Garza and Thomas Phone",Electronics,1558.24,1258.6,19.2,2022-04-05
+PROD_0099,"Swanson, Turner and Huynh Tablet",Electronics,1613.32,1269.16,21.3,2023-07-13
+PROD_0100,Gardner LLC Phone,Electronics,528.03,395.3,25.1,2023-06-16
+PROD_0101,Premium Shoes,Clothing,330.29,255.89,22.5,2021-11-20
+PROD_0102,Sport Shirt,Clothing,197.0,147.89,24.9,2023-01-27
+PROD_0103,Sport Shoes,Clothing,216.57,181.13,16.4,2023-04-10
+PROD_0104,Classic Shoes,Clothing,261.55,215.39,17.6,2022-11-04
+PROD_0105,Classic Shirt,Clothing,103.9,75.95,26.9,2024-07-18
+PROD_0106,Premium Jeans,Clothing,19.45,14.68,24.5,2020-09-14
+PROD_0107,Sport Dress,Clothing,183.08,135.04,26.2,2021-03-14
+PROD_0108,Premium Jacket,Clothing,289.26,206.35,28.7,2020-12-01
+PROD_0109,Premium Jeans,Clothing,121.75,98.31,19.3,2021-04-29
+PROD_0110,Sport Jeans,Clothing,141.11,112.94,20.0,2022-08-09
+PROD_0111,Sport Dress,Clothing,43.46,35.35,18.7,2023-11-05
+PROD_0112,Sport Jacket,Clothing,79.95,57.04,28.7,2022-12-07
+PROD_0113,Classic Dress,Clothing,119.31,91.33,23.5,2023-10-22
+PROD_0114,Sport Dress,Clothing,30.57,25.54,16.5,2022-10-28
+PROD_0115,Sport Shirt,Clothing,172.05,122.61,28.7,2024-08-01
+PROD_0116,Sport Jacket,Clothing,144.6,110.8,23.4,2021-03-01
+PROD_0117,Sport Jacket,Clothing,223.92,166.84,25.5,2023-09-19
+PROD_0118,Sport Shoes,Clothing,293.24,233.17,20.5,2023-07-28
+PROD_0119,Classic Shirt,Clothing,35.5,29.61,16.6,2023-09-08
+PROD_0120,Premium Shirt,Clothing,205.92,167.34,18.7,2022-01-28
+PROD_0121,Classic Jeans,Clothing,237.0,184.42,22.2,2024-07-19
+PROD_0122,Classic Jacket,Clothing,308.11,234.75,23.8,2022-08-14
+PROD_0123,Sport Shirt,Clothing,134.41,104.86,22.0,2023-09-14
+PROD_0124,Sport Jeans,Clothing,226.32,173.98,23.1,2022-03-16
+PROD_0125,Sport Jacket,Clothing,162.51,114.65,29.5,2021-04-12
+PROD_0126,Sport Shirt,Clothing,304.76,248.11,18.6,2023-05-25
+PROD_0127,Sport Shoes,Clothing,249.37,207.11,16.9,2024-08-19
+PROD_0128,Sport Jeans,Clothing,250.24,199.5,20.3,2024-05-27
+PROD_0129,Premium Shirt,Clothing,86.2,70.85,17.8,2021-12-10
+PROD_0130,Premium Shoes,Clothing,230.59,183.83,20.3,2021-08-20
+PROD_0131,Sport Jacket,Clothing,265.27,215.57,18.7,2023-09-02
+PROD_0132,Sport Shirt,Clothing,109.38,88.05,19.5,2023-11-06
+PROD_0133,Classic Jacket,Clothing,88.37,62.8,28.9,2022-05-31
+PROD_0134,Premium Shirt,Clothing,39.52,28.96,26.7,2024-01-01
+PROD_0135,Classic Jeans,Clothing,47.93,35.02,26.9,2021-01-29
+PROD_0136,Premium Jeans,Clothing,76.74,55.76,27.3,2022-10-10
+PROD_0137,Sport Jacket,Clothing,92.94,68.72,26.1,2023-11-14
+PROD_0138,Premium Dress,Clothing,72.16,54.44,24.6,2022-08-09
+PROD_0139,Premium Shoes,Clothing,179.44,136.74,23.8,2022-08-28
+PROD_0140,Premium Jeans,Clothing,139.44,105.63,24.2,2021-02-10
+PROD_0141,Sport Dress,Clothing,183.93,145.1,21.1,2022-05-04
+PROD_0142,Sport Jeans,Clothing,60.0,47.31,21.1,2021-11-04
+PROD_0143,Classic Shoes,Clothing,266.61,186.69,30.0,2023-01-21
+PROD_0144,Sport Dress,Clothing,234.62,194.75,17.0,2022-07-19
+PROD_0145,Premium Shoes,Clothing,140.81,102.73,27.0,2022-12-08
+PROD_0146,Sport Jeans,Clothing,184.72,151.77,17.8,2021-08-26
+PROD_0147,Sport Shirt,Clothing,89.83,69.34,22.8,2023-06-28
+PROD_0148,Classic Shirt,Clothing,163.39,125.02,23.5,2024-02-18
+PROD_0149,Classic Shoes,Clothing,50.18,35.59,29.1,2024-10-29
+PROD_0150,Classic Jacket,Clothing,49.37,38.34,22.3,2022-04-05
+PROD_0151,Premium Jeans,Clothing,54.9,40.74,25.8,2023-06-12
+PROD_0152,Premium Shirt,Clothing,155.42,126.01,18.9,2020-10-29
+PROD_0153,Premium Shoes,Clothing,198.12,159.11,19.7,2024-06-24
+PROD_0154,Sport Jeans,Clothing,331.58,258.47,22.0,2022-08-01
+PROD_0155,Sport Jeans,Clothing,74.08,56.03,24.4,2021-03-04
+PROD_0156,Premium Jacket,Clothing,248.53,200.89,19.2,2023-09-16
+PROD_0157,Sport Jacket,Clothing,158.65,117.44,26.0,2023-06-28
+PROD_0158,Premium Jacket,Clothing,83.62,68.37,18.2,2023-08-14
+PROD_0159,Premium Shirt,Clothing,105.68,85.66,18.9,2024-10-13
+PROD_0160,Premium Shoes,Clothing,338.84,247.97,26.8,2023-02-02
+PROD_0161,Premium Shirt,Clothing,307.17,216.4,29.6,2024-07-07
+PROD_0162,Sport Dress,Clothing,270.79,197.33,27.1,2023-01-09
+PROD_0163,Premium Shoes,Clothing,276.19,201.11,27.2,2022-11-17
+PROD_0164,Premium Shoes,Clothing,64.98,47.19,27.4,2021-05-21
+PROD_0165,Sport Dress,Clothing,178.63,150.46,15.8,2021-05-08
+PROD_0166,Premium Dress,Clothing,142.56,120.94,15.2,2021-12-20
+PROD_0167,Classic Jeans,Clothing,168.16,139.23,17.2,2021-07-24
+PROD_0168,Premium Jacket,Clothing,29.46,23.42,20.5,2022-04-02
+PROD_0169,Sport Dress,Clothing,317.71,233.41,26.5,2020-12-12
+PROD_0170,Classic Dress,Clothing,274.53,227.77,17.0,2021-05-19
+PROD_0171,Classic Dress,Clothing,200.32,143.73,28.2,2021-11-16
+PROD_0172,Sport Jacket,Clothing,186.96,132.71,29.0,2023-02-19
+PROD_0173,Sport Jacket,Clothing,91.23,77.44,15.1,2024-02-23
+PROD_0174,Premium Dress,Clothing,210.0,171.33,18.4,2023-03-27
+PROD_0175,Sport Shirt,Clothing,142.46,104.51,26.6,2021-08-30
+PROD_0176,Premium Jeans,Clothing,93.6,71.09,24.0,2024-01-19
+PROD_0177,Premium Jeans,Clothing,150.3,106.47,29.2,2021-04-10
+PROD_0178,Sport Dress,Clothing,121.2,98.38,18.8,2020-12-01
+PROD_0179,Premium Dress,Clothing,23.28,17.0,27.0,2021-09-09
+PROD_0180,Premium Shirt,Clothing,228.47,190.93,16.4,2024-02-15
+PROD_0181,Classic Jeans,Clothing,199.36,166.01,16.7,2022-03-06
+PROD_0182,Premium Dress,Clothing,21.84,18.04,17.4,2021-12-23
+PROD_0183,Sport Jacket,Clothing,42.47,35.39,16.7,2021-11-21
+PROD_0184,Premium Shoes,Clothing,106.05,87.56,17.4,2024-07-10
+PROD_0185,Premium Jacket,Clothing,44.15,35.72,19.1,2023-12-14
+PROD_0186,Premium Jeans,Clothing,40.53,33.72,16.8,2024-02-26
+PROD_0187,Classic Dress,Clothing,216.32,178.64,17.4,2022-03-17
+PROD_0188,Classic Jeans,Clothing,232.61,188.91,18.8,2024-04-23
+PROD_0189,Classic Jacket,Clothing,166.21,119.44,28.1,2022-08-10
+PROD_0190,Premium Dress,Clothing,231.36,188.61,18.5,2024-07-10
+PROD_0191,Premium Dress,Clothing,56.2,43.55,22.5,2022-07-29
+PROD_0192,Classic Dress,Clothing,172.32,135.99,21.1,2021-09-07
+PROD_0193,Classic Dress,Clothing,21.08,17.02,19.3,2024-01-11
+PROD_0194,Sport Shoes,Clothing,313.77,266.03,15.2,2022-05-03
+PROD_0195,Sport Dress,Clothing,59.67,45.12,24.4,2024-01-01
+PROD_0196,Premium Jeans,Clothing,208.01,159.57,23.3,2021-11-24
+PROD_0197,Classic Jeans,Clothing,116.86,94.16,19.4,2021-08-14
+PROD_0198,Premium Shoes,Clothing,21.1,17.69,16.2,2023-12-07
+PROD_0199,Sport Shoes,Clothing,178.68,138.15,22.7,2021-04-17
+PROD_0200,Premium Shirt,Clothing,167.13,122.09,26.9,2022-04-16
+PROD_0201,Deluxe Chair,Home & Garden,180.52,151.02,16.3,2022-09-26
+PROD_0202,Compact Plant,Home & Garden,74.2,60.73,18.2,2024-02-02
+PROD_0203,Compact Tool,Home & Garden,67.12,52.81,21.3,2021-08-23
+PROD_0204,Deluxe Chair,Home & Garden,270.61,205.61,24.0,2021-12-01
+PROD_0205,Compact Chair,Home & Garden,146.48,114.79,21.6,2022-05-07
+PROD_0206,Deluxe Chair,Home & Garden,78.2,59.13,24.4,2024-06-26
+PROD_0207,Compact Chair,Home & Garden,60.28,47.31,21.5,2021-11-06
+PROD_0208,Compact Table,Home & Garden,179.05,137.69,23.1,2021-02-18
+PROD_0209,Standard Chair,Home & Garden,345.75,248.18,28.2,2024-04-07
+PROD_0210,Compact Table,Home & Garden,491.15,355.85,27.5,2023-01-18
+PROD_0211,Compact Tool,Home & Garden,288.66,235.58,18.4,2021-10-19
+PROD_0212,Deluxe Tool,Home & Garden,141.44,102.97,27.2,2021-07-18
+PROD_0213,Deluxe Plant,Home & Garden,112.27,87.07,22.4,2023-04-06
+PROD_0214,Compact Tool,Home & Garden,102.53,83.83,18.2,2023-02-28
+PROD_0215,Compact Tool,Home & Garden,34.27,29.02,15.3,2022-01-26
+PROD_0216,Standard Lamp,Home & Garden,449.34,332.28,26.1,2021-10-02
+PROD_0217,Deluxe Lamp,Home & Garden,254.71,188.73,25.9,2022-01-09
+PROD_0218,Deluxe Lamp,Home & Garden,32.99,26.68,19.1,2021-05-24
+PROD_0219,Standard Table,Home & Garden,341.79,283.71,17.0,2023-06-19
+PROD_0220,Compact Lamp,Home & Garden,333.76,261.65,21.6,2022-05-29
+PROD_0221,Standard Lamp,Home & Garden,420.63,345.32,17.9,2024-05-10
+PROD_0222,Deluxe Chair,Home & Garden,235.56,171.81,27.1,2024-10-12
+PROD_0223,Standard Tool,Home & Garden,350.25,289.18,17.4,2022-11-27
+PROD_0224,Compact Chair,Home & Garden,311.17,261.35,16.0,2024-01-11
+PROD_0225,Deluxe Tool,Home & Garden,41.82,34.43,17.7,2022-03-30
+PROD_0226,Deluxe Tool,Home & Garden,427.84,313.84,26.6,2021-06-01
+PROD_0227,Standard Table,Home & Garden,52.0,41.33,20.5,2020-12-04
+PROD_0228,Standard Chair,Home & Garden,389.53,320.81,17.6,2024-09-30
+PROD_0229,Deluxe Lamp,Home & Garden,285.04,209.23,26.6,2022-12-29
+PROD_0230,Standard Table,Home & Garden,340.64,242.59,28.8,2021-07-12
+PROD_0231,Standard Tool,Home & Garden,439.55,314.95,28.3,2023-06-28
+PROD_0232,Compact Lamp,Home & Garden,177.56,143.52,19.2,2023-04-03
+PROD_0233,Compact Tool,Home & Garden,418.49,326.01,22.1,2022-06-13
+PROD_0234,Deluxe Tool,Home & Garden,91.6,67.64,26.2,2021-07-07
+PROD_0235,Standard Chair,Home & Garden,349.59,254.72,27.1,2022-09-02
+PROD_0236,Deluxe Lamp,Home & Garden,283.26,198.59,29.9,2023-05-22
+PROD_0237,Deluxe Chair,Home & Garden,333.32,268.78,19.4,2023-11-27
+PROD_0238,Compact Tool,Home & Garden,401.61,286.35,28.7,2024-08-11
+PROD_0239,Deluxe Lamp,Home & Garden,184.74,155.87,15.6,2024-05-26
+PROD_0240,Standard Tool,Home & Garden,117.07,98.15,16.2,2020-11-03
+PROD_0241,Deluxe Lamp,Home & Garden,279.39,234.39,16.1,2023-05-08
+PROD_0242,Deluxe Lamp,Home & Garden,72.65,58.8,19.1,2023-04-09
+PROD_0243,Compact Plant,Home & Garden,279.36,202.44,27.5,2024-08-28
+PROD_0244,Standard Chair,Home & Garden,396.1,308.25,22.2,2023-11-21
+PROD_0245,Deluxe Plant,Home & Garden,61.73,46.55,24.6,2021-07-17
+PROD_0246,Standard Chair,Home & Garden,547.81,388.22,29.1,2023-09-06
+PROD_0247,Deluxe Lamp,Home & Garden,132.38,99.0,25.2,2022-05-01
+PROD_0248,Deluxe Lamp,Home & Garden,18.28,13.18,27.9,2022-10-02
+PROD_0249,Deluxe Plant,Home & Garden,116.16,92.3,20.5,2022-03-07
+PROD_0250,Compact Plant,Home & Garden,354.6,259.93,26.7,2023-08-04
+PROD_0251,Compact Chair,Home & Garden,468.54,333.53,28.8,2023-08-07
+PROD_0252,Deluxe Chair,Home & Garden,56.8,46.16,18.7,2021-09-08
+PROD_0253,Compact Table,Home & Garden,348.4,273.77,21.4,2022-06-09
+PROD_0254,Compact Chair,Home & Garden,512.02,404.92,20.9,2022-12-15
+PROD_0255,Standard Tool,Home & Garden,362.8,268.62,26.0,2020-11-23
+PROD_0256,Compact Table,Home & Garden,362.32,267.89,26.1,2022-03-21
+PROD_0257,Standard Table,Home & Garden,332.23,278.35,16.2,2020-09-24
+PROD_0258,Deluxe Lamp,Home & Garden,429.62,337.53,21.4,2021-11-05
+PROD_0259,Standard Chair,Home & Garden,329.15,259.02,21.3,2024-08-22
+PROD_0260,Standard Table,Home & Garden,379.19,274.86,27.5,2024-04-19
+PROD_0261,Compact Table,Home & Garden,189.94,145.33,23.5,2022-01-18
+PROD_0262,Compact Chair,Home & Garden,259.18,209.7,19.1,2023-05-30
+PROD_0263,Standard Tool,Home & Garden,173.28,130.76,24.5,2021-04-13
+PROD_0264,Standard Tool,Home & Garden,148.83,112.21,24.6,2024-03-02
+PROD_0265,Compact Table,Home & Garden,240.59,199.21,17.2,2023-10-17
+PROD_0266,Deluxe Table,Home & Garden,210.53,149.16,29.2,2022-10-07
+PROD_0267,Deluxe Plant,Home & Garden,181.79,128.27,29.4,2021-09-27
+PROD_0268,Deluxe Table,Home & Garden,428.82,335.41,21.8,2023-05-03
+PROD_0269,Compact Lamp,Home & Garden,292.17,227.44,22.2,2021-09-03
+PROD_0270,Standard Table,Home & Garden,115.16,91.44,20.6,2021-02-11
+PROD_0271,Standard Table,Home & Garden,144.84,107.77,25.6,2023-12-21
+PROD_0272,Compact Chair,Home & Garden,185.59,140.75,24.2,2024-06-04
+PROD_0273,Standard Chair,Home & Garden,74.68,56.07,24.9,2021-05-30
+PROD_0274,Standard Table,Home & Garden,264.0,197.86,25.1,2023-06-11
+PROD_0275,Deluxe Plant,Home & Garden,330.22,272.7,17.4,2022-07-05
+PROD_0276,Standard Lamp,Home & Garden,387.78,278.22,28.3,2021-07-06
+PROD_0277,Deluxe Table,Home & Garden,272.72,228.15,16.3,2022-09-27
+PROD_0278,Deluxe Table,Home & Garden,365.42,284.43,22.2,2023-12-18
+PROD_0279,Standard Lamp,Home & Garden,406.86,326.15,19.8,2020-09-28
+PROD_0280,Standard Chair,Home & Garden,255.66,195.46,23.5,2021-05-29
+PROD_0281,Standard Lamp,Home & Garden,92.55,70.54,23.8,2022-12-28
+PROD_0282,Compact Tool,Home & Garden,61.05,49.73,18.5,2021-09-09
+PROD_0283,Standard Tool,Home & Garden,60.5,46.72,22.8,2024-02-05
+PROD_0284,Standard Chair,Home & Garden,139.86,109.04,22.0,2023-05-10
+PROD_0285,Deluxe Lamp,Home & Garden,273.94,201.85,26.3,2023-12-16
+PROD_0286,Deluxe Tool,Home & Garden,408.37,300.61,26.4,2022-05-10
+PROD_0287,Standard Chair,Home & Garden,223.67,175.19,21.7,2024-05-07
+PROD_0288,Deluxe Tool,Home & Garden,245.79,192.51,21.7,2024-01-19
+PROD_0289,Standard Lamp,Home & Garden,184.23,147.38,20.0,2022-12-20
+PROD_0290,Compact Lamp,Home & Garden,104.27,82.44,20.9,2022-07-05
+PROD_0291,Standard Tool,Home & Garden,400.74,295.31,26.3,2023-10-12
+PROD_0292,Compact Chair,Home & Garden,84.13,59.4,29.4,2022-02-03
+PROD_0293,Standard Tool,Home & Garden,213.36,172.1,19.3,2020-11-01
+PROD_0294,Deluxe Lamp,Home & Garden,416.91,293.64,29.6,2022-12-27
+PROD_0295,Deluxe Plant,Home & Garden,527.0,434.64,17.5,2022-09-19
+PROD_0296,Deluxe Tool,Home & Garden,174.96,124.64,28.8,2023-03-18
+PROD_0297,Compact Table,Home & Garden,343.24,284.36,17.2,2024-09-26
+PROD_0298,Standard Plant,Home & Garden,120.79,86.33,28.5,2022-05-09
+PROD_0299,Deluxe Lamp,Home & Garden,67.07,47.37,29.4,2022-10-17
+PROD_0300,Compact Lamp,Home & Garden,101.96,82.13,19.4,2022-01-09
+PROD_0301,Kids Ball,Sports & Outdoors,435.03,360.78,17.1,2022-08-28
+PROD_0302,Kids Bike,Sports & Outdoors,246.29,202.36,17.8,2023-07-26
+PROD_0303,Kids Bike,Sports & Outdoors,277.29,229.9,17.1,2022-03-22
+PROD_0304,Kids Gear,Sports & Outdoors,82.44,68.08,17.4,2023-10-28
+PROD_0305,Amateur Gear,Sports & Outdoors,545.07,459.29,15.7,2024-09-06
+PROD_0306,Kids Bike,Sports & Outdoors,136.62,110.35,19.2,2021-04-14
+PROD_0307,Kids Racket,Sports & Outdoors,494.77,417.02,15.7,2024-06-12
+PROD_0308,Pro Gear,Sports & Outdoors,358.14,278.36,22.3,2022-01-20
+PROD_0309,Kids Gear,Sports & Outdoors,557.82,421.48,24.4,2024-09-29
+PROD_0310,Kids Racket,Sports & Outdoors,524.51,398.65,24.0,2024-06-30
+PROD_0311,Kids Equipment,Sports & Outdoors,381.52,272.45,28.6,2022-12-14
+PROD_0312,Amateur Gear,Sports & Outdoors,200.3,146.58,26.8,2021-09-27
+PROD_0313,Kids Ball,Sports & Outdoors,816.66,604.18,26.0,2024-09-03
+PROD_0314,Amateur Bike,Sports & Outdoors,98.48,80.66,18.1,2020-10-30
+PROD_0315,Pro Gear,Sports & Outdoors,87.43,64.41,26.3,2023-07-06
+PROD_0316,Kids Equipment,Sports & Outdoors,532.14,431.3,18.9,2024-05-04
+PROD_0317,Kids Bike,Sports & Outdoors,279.21,237.27,15.0,2021-08-11
+PROD_0318,Amateur Gear,Sports & Outdoors,580.17,449.07,22.6,2023-10-03
+PROD_0319,Amateur Racket,Sports & Outdoors,101.31,78.0,23.0,2022-12-15
+PROD_0320,Kids Gear,Sports & Outdoors,48.97,34.52,29.5,2020-09-02
+PROD_0321,Kids Racket,Sports & Outdoors,457.5,385.94,15.6,2021-04-26
+PROD_0322,Kids Ball,Sports & Outdoors,615.79,463.11,24.8,2024-09-20
+PROD_0323,Amateur Equipment,Sports & Outdoors,456.88,370.28,19.0,2024-06-21
+PROD_0324,Kids Equipment,Sports & Outdoors,607.47,435.41,28.3,2024-01-02
+PROD_0325,Amateur Ball,Sports & Outdoors,186.61,134.33,28.0,2024-05-27
+PROD_0326,Pro Bike,Sports & Outdoors,236.06,169.16,28.3,2021-09-03
+PROD_0327,Pro Racket,Sports & Outdoors,410.09,331.76,19.1,2023-10-02
+PROD_0328,Pro Ball,Sports & Outdoors,333.41,274.43,17.7,2023-05-14
+PROD_0329,Pro Racket,Sports & Outdoors,420.64,302.79,28.0,2021-05-18
+PROD_0330,Amateur Equipment,Sports & Outdoors,383.14,274.23,28.4,2022-11-19
+PROD_0331,Pro Gear,Sports & Outdoors,374.81,304.34,18.8,2022-06-07
+PROD_0332,Amateur Equipment,Sports & Outdoors,394.36,330.46,16.2,2023-10-01
+PROD_0333,Pro Gear,Sports & Outdoors,682.08,524.12,23.2,2022-09-13
+PROD_0334,Amateur Gear,Sports & Outdoors,425.08,358.98,15.6,2022-09-18
+PROD_0335,Pro Racket,Sports & Outdoors,248.35,178.53,28.1,2022-11-29
+PROD_0336,Kids Ball,Sports & Outdoors,476.15,390.84,17.9,2021-03-10
+PROD_0337,Pro Gear,Sports & Outdoors,140.18,107.17,23.5,2021-03-16
+PROD_0338,Pro Racket,Sports & Outdoors,373.29,278.22,25.5,2021-02-16
+PROD_0339,Kids Equipment,Sports & Outdoors,627.47,508.08,19.0,2021-03-03
+PROD_0340,Amateur Ball,Sports & Outdoors,68.68,50.78,26.1,2020-08-20
+PROD_0341,Kids Racket,Sports & Outdoors,663.83,481.65,27.4,2022-08-08
+PROD_0342,Pro Gear,Sports & Outdoors,165.01,119.71,27.5,2021-05-25
+PROD_0343,Pro Gear,Sports & Outdoors,29.07,20.46,29.6,2022-09-27
+PROD_0344,Kids Equipment,Sports & Outdoors,834.11,653.37,21.7,2020-12-08
+PROD_0345,Kids Equipment,Sports & Outdoors,376.63,291.85,22.5,2020-10-12
+PROD_0346,Amateur Gear,Sports & Outdoors,767.34,543.68,29.1,2024-03-12
+PROD_0347,Kids Equipment,Sports & Outdoors,56.12,41.11,26.7,2021-04-26
+PROD_0348,Amateur Equipment,Sports & Outdoors,26.04,21.43,17.7,2023-03-10
+PROD_0349,Amateur Racket,Sports & Outdoors,275.59,226.17,17.9,2024-06-08
+PROD_0350,Kids Gear,Sports & Outdoors,469.81,388.39,17.3,2022-05-04
+PROD_0351,Amateur Bike,Sports & Outdoors,49.93,39.0,21.9,2021-07-27
+PROD_0352,Pro Bike,Sports & Outdoors,456.1,338.75,25.7,2020-10-28
+PROD_0353,Kids Gear,Sports & Outdoors,316.47,262.92,16.9,2024-02-05
+PROD_0354,Kids Racket,Sports & Outdoors,58.69,42.42,27.7,2021-03-14
+PROD_0355,Amateur Gear,Sports & Outdoors,435.36,364.87,16.2,2022-05-24
+PROD_0356,Pro Bike,Sports & Outdoors,589.38,498.55,15.4,2024-05-05
+PROD_0357,Pro Bike,Sports & Outdoors,68.75,57.4,16.5,2022-12-27
+PROD_0358,Amateur Bike,Sports & Outdoors,493.12,346.89,29.7,2021-09-02
+PROD_0359,Kids Ball,Sports & Outdoors,179.39,151.91,15.3,2020-12-20
+PROD_0360,Pro Racket,Sports & Outdoors,468.38,361.47,22.8,2020-10-31
+PROD_0361,Pro Gear,Sports & Outdoors,120.25,99.2,17.5,2024-04-24
+PROD_0362,Kids Racket,Sports & Outdoors,724.45,520.9,28.1,2023-01-26
+PROD_0363,Kids Racket,Sports & Outdoors,637.83,493.1,22.7,2023-06-26
+PROD_0364,Pro Gear,Sports & Outdoors,851.28,688.05,19.2,2024-03-10
+PROD_0365,Amateur Bike,Sports & Outdoors,216.15,160.83,25.6,2024-03-16
+PROD_0366,Kids Gear,Sports & Outdoors,571.61,458.89,19.7,2024-04-30
+PROD_0367,Amateur Ball,Sports & Outdoors,257.98,185.96,27.9,2023-09-04
+PROD_0368,Pro Gear,Sports & Outdoors,407.9,300.76,26.3,2024-02-17
+PROD_0369,Amateur Equipment,Sports & Outdoors,378.28,269.76,28.7,2021-03-15
+PROD_0370,Kids Ball,Sports & Outdoors,65.2,50.1,23.2,2022-07-03
+PROD_0371,Kids Gear,Sports & Outdoors,689.07,547.63,20.5,2020-10-02
+PROD_0372,Amateur Ball,Sports & Outdoors,389.29,300.24,22.9,2023-05-01
+PROD_0373,Amateur Bike,Sports & Outdoors,119.31,85.32,28.5,2023-02-02
+PROD_0374,Amateur Gear,Sports & Outdoors,179.23,142.25,20.6,2023-07-22
+PROD_0375,Kids Equipment,Sports & Outdoors,132.3,97.42,26.4,2021-01-26
+PROD_0376,Kids Racket,Sports & Outdoors,83.64,59.18,29.2,2021-03-13
+PROD_0377,Amateur Racket,Sports & Outdoors,736.17,547.42,25.6,2020-12-24
+PROD_0378,Amateur Gear,Sports & Outdoors,524.9,429.94,18.1,2021-12-23
+PROD_0379,Amateur Ball,Sports & Outdoors,79.99,57.65,27.9,2024-05-02
+PROD_0380,Amateur Bike,Sports & Outdoors,689.39,550.09,20.2,2024-05-11
+PROD_0381,Kids Gear,Sports & Outdoors,570.65,434.6,23.8,2023-04-10
+PROD_0382,Kids Racket,Sports & Outdoors,451.23,364.22,19.3,2023-09-23
+PROD_0383,Amateur Racket,Sports & Outdoors,174.52,135.44,22.4,2022-12-15
+PROD_0384,Kids Equipment,Sports & Outdoors,458.66,341.72,25.5,2021-06-17
+PROD_0385,Pro Gear,Sports & Outdoors,237.61,200.7,15.5,2024-07-20
+PROD_0386,Kids Equipment,Sports & Outdoors,371.65,282.49,24.0,2021-08-11
+PROD_0387,Kids Ball,Sports & Outdoors,227.9,183.8,19.4,2020-12-23
+PROD_0388,Pro Gear,Sports & Outdoors,264.83,199.9,24.5,2020-12-18
+PROD_0389,Pro Gear,Sports & Outdoors,27.87,22.76,18.3,2024-06-25
+PROD_0390,Pro Ball,Sports & Outdoors,168.65,126.49,25.0,2022-11-14
+PROD_0391,Amateur Gear,Sports & Outdoors,166.55,129.43,22.3,2023-10-22
+PROD_0392,Amateur Racket,Sports & Outdoors,608.43,436.81,28.2,2024-07-01
+PROD_0393,Amateur Bike,Sports & Outdoors,319.82,267.24,16.4,2023-03-25
+PROD_0394,Amateur Gear,Sports & Outdoors,497.35,351.99,29.2,2023-09-07
+PROD_0395,Amateur Gear,Sports & Outdoors,625.19,501.05,19.9,2022-04-09
+PROD_0396,Amateur Ball,Sports & Outdoors,241.57,192.07,20.5,2022-03-09
+PROD_0397,Amateur Ball,Sports & Outdoors,329.41,241.06,26.8,2021-02-06
+PROD_0398,Kids Equipment,Sports & Outdoors,395.77,283.53,28.4,2021-07-27
+PROD_0399,Pro Bike,Sports & Outdoors,152.95,112.58,26.4,2021-05-23
+PROD_0400,Pro Ball,Sports & Outdoors,797.95,608.82,23.7,2021-07-12
+PROD_0401,Organized motivating open architecture Book,Books & Media,77.32,57.96,25.0,2023-11-22
+PROD_0402,Cloned motivating product Book,Books & Media,28.23,20.76,26.5,2024-08-28
+PROD_0403,Organized foreground productivity DVD,Books & Media,68.13,54.14,20.5,2021-06-21
+PROD_0404,Managed reciprocal installation DVD,Books & Media,27.61,20.34,26.3,2022-11-02
+PROD_0405,Reduced demand-driven open system Book,Books & Media,62.18,46.23,25.7,2022-08-27
+PROD_0406,Down-sized explicit infrastructure DVD,Books & Media,19.94,16.69,16.3,2021-11-18
+PROD_0407,Down-sized secondary attitude DVD,Books & Media,11.77,8.86,24.7,2024-03-26
+PROD_0408,Managed optimizing protocol DVD,Books & Media,21.83,16.93,22.4,2021-12-19
+PROD_0409,Up-sized maximized monitoring Magazine,Books & Media,30.62,24.38,20.4,2021-10-04
+PROD_0410,Robust modular support Book,Books & Media,63.1,45.47,27.9,2022-12-31
+PROD_0411,Versatile zero tolerance budgetary management DVD,Books & Media,72.7,55.58,23.5,2022-09-03
+PROD_0412,Assimilated fault-tolerant hardware Magazine,Books & Media,20.35,15.3,24.8,2022-10-25
+PROD_0413,Switchable stable interface Game,Books & Media,41.5,32.0,22.9,2024-02-13
+PROD_0414,Face-to-face neutral migration Game,Books & Media,87.97,65.33,25.7,2021-08-11
+PROD_0415,Balanced bifurcated flexibility DVD,Books & Media,51.46,40.33,21.6,2021-12-17
+PROD_0416,De-engineered systemic initiative Book,Books & Media,83.86,67.93,19.0,2023-04-11
+PROD_0417,Compatible 6thgeneration flexibility DVD,Books & Media,104.28,74.86,28.2,2020-08-29
+PROD_0418,Fully-configurable dynamic knowledgebase Game,Books & Media,67.78,51.48,24.0,2023-06-07
+PROD_0419,Operative even-keeled project Book,Books & Media,33.09,23.7,28.4,2022-11-16
+PROD_0420,Triple-buffered cohesive toolset Book,Books & Media,34.91,25.52,26.9,2024-03-15
+PROD_0421,Persistent encompassing policy Game,Books & Media,77.93,61.2,21.5,2023-03-03
+PROD_0422,Configurable coherent synergy Magazine,Books & Media,52.84,41.71,21.1,2022-10-04
+PROD_0423,Balanced uniform algorithm Magazine,Books & Media,62.69,52.09,16.9,2021-07-24
+PROD_0424,Pre-emptive hybrid instruction set DVD,Books & Media,16.5,11.6,29.7,2021-08-14
+PROD_0425,Reverse-engineered well-modulated productivity Book,Books & Media,12.62,10.17,19.4,2024-05-05
+PROD_0426,Innovative composite productivity DVD,Books & Media,66.53,54.36,18.3,2021-06-19
+PROD_0427,Ergonomic object-oriented approach Book,Books & Media,69.61,53.9,22.6,2024-01-26
+PROD_0428,Realigned human-resource knowledgebase Game,Books & Media,49.48,39.7,19.8,2021-12-19
+PROD_0429,Managed secondary matrix Book,Books & Media,97.0,73.91,23.8,2024-05-01
+PROD_0430,Self-enabling zero administration knowledge user Book,Books & Media,73.16,53.2,27.3,2024-04-22
+PROD_0431,Team-oriented explicit capacity Game,Books & Media,38.78,31.84,17.9,2022-03-29
+PROD_0432,Re-engineered logistical process improvement Magazine,Books & Media,70.18,59.55,15.1,2023-06-21
+PROD_0433,Open-architected bandwidth-monitored Internet solution Game,Books & Media,58.08,47.05,19.0,2021-02-24
+PROD_0434,Team-oriented impactful algorithm Book,Books & Media,15.61,13.13,15.9,2023-10-06
+PROD_0435,Secured exuding success Game,Books & Media,23.04,16.98,26.3,2023-03-19
+PROD_0436,Front-line needs-based paradigm Book,Books & Media,57.11,47.15,17.4,2021-07-29
+PROD_0437,Self-enabling optimizing throughput Magazine,Books & Media,29.76,21.33,28.3,2021-09-24
+PROD_0438,Cross-group high-level leverage Magazine,Books & Media,80.22,66.04,17.7,2023-05-13
+PROD_0439,Progressive local encryption Book,Books & Media,5.16,3.86,25.2,2021-03-11
+PROD_0440,Customer-focused asynchronous access Magazine,Books & Media,25.81,20.33,21.2,2020-10-12
+PROD_0441,Reactive foreground orchestration Game,Books & Media,100.34,71.76,28.5,2022-10-16
+PROD_0442,Seamless 24/7 Graphic Interface Magazine,Books & Media,75.71,55.23,27.1,2024-09-10
+PROD_0443,Proactive empowering middleware DVD,Books & Media,44.77,32.86,26.6,2021-12-30
+PROD_0444,Multi-lateral exuding attitude Magazine,Books & Media,42.75,36.0,15.8,2021-10-01
+PROD_0445,Object-based scalable encoding DVD,Books & Media,20.99,16.26,22.5,2024-01-09
+PROD_0446,Switchable intermediate knowledge user Game,Books & Media,42.88,31.24,27.1,2024-06-24
+PROD_0447,User-centric stable interface Magazine,Books & Media,35.11,27.64,21.3,2021-07-12
+PROD_0448,Synergistic secondary infrastructure Magazine,Books & Media,72.23,58.25,19.4,2020-09-28
+PROD_0449,Versatile bandwidth-monitored portal Magazine,Books & Media,101.52,78.16,23.0,2022-07-21
+PROD_0450,Object-based optimal intranet Game,Books & Media,76.82,55.56,27.7,2021-06-14
+PROD_0451,Assimilated neutral task-force Game,Books & Media,99.87,74.14,25.8,2024-01-21
+PROD_0452,Public-key executive intranet DVD,Books & Media,59.97,49.37,17.7,2023-03-07
+PROD_0453,Seamless neutral function Book,Books & Media,32.11,26.42,17.7,2021-01-13
+PROD_0454,Ameliorated human-resource encryption Game,Books & Media,91.1,73.11,19.7,2023-01-14
+PROD_0455,Multi-tiered content-based conglomeration Magazine,Books & Media,34.14,28.25,17.3,2024-09-25
+PROD_0456,Front-line interactive knowledge user DVD,Books & Media,77.12,65.36,15.2,2021-11-23
+PROD_0457,Robust zero administration orchestration Magazine,Books & Media,50.77,42.38,16.5,2023-11-13
+PROD_0458,Organized bifurcated initiative Magazine,Books & Media,13.52,10.21,24.5,2024-09-25
+PROD_0459,Re-contextualized mission-critical challenge Game,Books & Media,72.11,54.7,24.1,2022-10-28
+PROD_0460,Polarized mission-critical archive Book,Books & Media,47.82,33.5,29.9,2023-02-18
+PROD_0461,Balanced well-modulated secured line Magazine,Books & Media,21.48,17.0,20.9,2020-10-09
+PROD_0462,Right-sized modular initiative Game,Books & Media,13.48,11.33,15.9,2024-06-26
+PROD_0463,Reduced transitional alliance DVD,Books & Media,69.31,53.03,23.5,2021-04-10
+PROD_0464,Future-proofed foreground middleware Magazine,Books & Media,57.09,46.63,18.3,2021-03-02
+PROD_0465,Cross-group intermediate standardization DVD,Books & Media,35.88,30.36,15.4,2021-09-21
+PROD_0466,Total upward-trending model Game,Books & Media,13.39,10.56,21.1,2022-05-15
+PROD_0467,Synchronized clear-thinking groupware Game,Books & Media,45.93,34.4,25.1,2020-09-09
+PROD_0468,Progressive intermediate customer loyalty Game,Books & Media,36.84,28.32,23.1,2022-02-08
+PROD_0469,Fundamental systematic array Game,Books & Media,14.29,11.36,20.5,2024-02-22
+PROD_0470,Reactive modular workforce Game,Books & Media,37.16,27.16,26.9,2020-09-03
+PROD_0471,Multi-tiered intangible success Book,Books & Media,54.95,43.5,20.8,2021-04-19
+PROD_0472,Customizable executive encoding DVD,Books & Media,55.53,42.46,23.5,2023-04-02
+PROD_0473,Object-based holistic intranet Book,Books & Media,81.06,61.37,24.3,2021-07-08
+PROD_0474,Cross-group bandwidth-monitored capacity DVD,Books & Media,87.98,74.64,15.2,2021-02-20
+PROD_0475,Function-based asynchronous matrix Magazine,Books & Media,51.02,42.75,16.2,2021-02-07
+PROD_0476,Down-sized 24/7 array Magazine,Books & Media,45.76,37.7,17.6,2021-09-30
+PROD_0477,Ameliorated analyzing knowledge user DVD,Books & Media,47.62,35.4,25.7,2024-10-07
+PROD_0478,Grass-roots directional toolset Magazine,Books & Media,113.52,87.4,23.0,2022-10-31
+PROD_0479,Optional eco-centric core Magazine,Books & Media,30.71,23.7,22.8,2024-01-02
+PROD_0480,Versatile 3rdgeneration knowledge user Magazine,Books & Media,103.21,74.05,28.3,2022-02-18
+PROD_0481,Up-sized regional orchestration Book,Books & Media,57.62,47.55,17.5,2022-01-04
+PROD_0482,Proactive 3rdgeneration success Book,Books & Media,82.63,62.98,23.8,2022-02-10
+PROD_0483,Cross-platform multi-state open system Game,Books & Media,86.9,65.19,25.0,2022-12-02
+PROD_0484,Operative context-sensitive parallelism DVD,Books & Media,26.85,20.93,22.0,2023-09-12
+PROD_0485,Organic well-modulated paradigm Magazine,Books & Media,79.75,58.82,26.2,2024-06-15
+PROD_0486,Diverse client-driven toolset DVD,Books & Media,88.94,64.34,27.7,2020-09-06
+PROD_0487,Switchable object-oriented groupware Game,Books & Media,58.22,48.14,17.3,2024-07-28
+PROD_0488,Synergistic radical portal Game,Books & Media,69.4,53.41,23.0,2022-01-06
+PROD_0489,Expanded clear-thinking projection Magazine,Books & Media,109.91,86.81,21.0,2023-09-10
+PROD_0490,Digitized bifurcated synergy Game,Books & Media,76.31,64.61,15.3,2022-10-22
+PROD_0491,Decentralized cohesive array Magazine,Books & Media,42.12,34.46,18.2,2021-07-10
+PROD_0492,Virtual full-range implementation Game,Books & Media,71.87,58.71,18.3,2022-11-19
+PROD_0493,Devolved secondary success Game,Books & Media,74.5,60.27,19.1,2024-01-19
+PROD_0494,Monitored zero administration approach Magazine,Books & Media,66.11,51.21,22.5,2021-10-03
+PROD_0495,Multi-lateral global ability Game,Books & Media,47.82,39.55,17.3,2021-04-16
+PROD_0496,Multi-tiered scalable attitude Game,Books & Media,30.11,22.07,26.7,2023-04-04
+PROD_0497,User-centric global concept Game,Books & Media,59.6,49.48,17.0,2024-07-07
+PROD_0498,Centralized scalable utilization DVD,Books & Media,79.58,57.39,27.9,2022-05-02
+PROD_0499,Face-to-face zero-defect standardization Book,Books & Media,5.35,4.29,19.8,2024-06-30
+PROD_0500,Reduced methodical data-warehouse DVD,Books & Media,14.65,12.02,18.0,2024-06-04
