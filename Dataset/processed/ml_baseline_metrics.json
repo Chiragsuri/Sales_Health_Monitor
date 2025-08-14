@@ -1,0 +1,87 @@
+{
+  "temporal_analysis_date": "2025-08-14",
+  "data_period": {
+    "start_date": "2022-01-01",
+    "end_date": "2024-12-31",
+    "total_records": 777288
+  },
+  "seasonal_baselines": {
+    "monthly_seasonal_index": {
+      "1": 52.8,
+      "2": 50.3,
+      "3": 99.6,
+      "4": 92.8,
+      "5": 101.2,
+      "6": 86.0,
+      "7": 87.8,
+      "8": 92.1,
+      "9": 104.4,
+      "10": 110.0,
+      "11": 156.3,
+      "12": 166.7
+    },
+    "peak_months": [
+      11,
+      12,
+      1
+    ],
+    "low_months": [
+      6,
+      7,
+      8
+    ],
+    "normal_range": [
+      90,
+      110
+    ]
+  },
+  "growth_baselines": {
+    "normal_monthly_growth": {
+      "mean": 9.447176821187634,
+      "std": 35.65737872286169,
+      "upper_threshold": 95.54157148015706,
+      "lower_threshold": -31.078332364535296
+    },
+    "quarterly_patterns": {
+      "q1_typical": -40.0,
+      "q2_typical": 25.0,
+      "q3_typical": 15.0,
+      "q4_typical": 50.0
+    }
+  },
+  "daily_baselines": {
+    "weekday_index": {
+      "Monday": 97.7,
+      "Tuesday": 100.1,
+      "Wednesday": 126.7,
+      "Thursday": 125.7,
+      "Friday": 126.0,
+      "Saturday": 74.2,
+      "Sunday": 49.7
+    },
+    "business_days": [
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "weekend_performance": 62.0,
+    "weekday_performance": 115.2
+  },
+  "revenue_thresholds": {
+    "daily_normal_range": {
+      "min": 179117.50959966952,
+      "max": 925435.5348308093
+    },
+    "monthly_normal_range": {
+      "min": 7153013.125,
+      "max": 23303658.76
+    }
+  },
+  "alert_thresholds": {
+    "revenue_spike_threshold": 200,
+    "revenue_drop_threshold": -50,
+    "transaction_anomaly": 150,
+    "weekend_anomaly": 150,
+    "off_season_spike": 250
+  }
+}
