@@ -1,0 +1,64 @@
+{
+  "anomaly_detection_config": {
+    "anomaly_detection": {
+      "z_score_threshold": 2.0,
+      "minimum_baseline_months": 3,
+      "alert_frequency": "monthly",
+      "escalation_threshold": 3.0
+    },
+    "product_thresholds": {
+      "PROD_0038": {
+        "baseline_mean": 170099.09,
+        "lower_threshold": 0,
+        "upper_threshold": 398925.41
+      },
+      "PROD_0004": {
+        "baseline_mean": 162616.78,
+        "lower_threshold": 0,
+        "upper_threshold": 366072.74
+      },
+      "PROD_0095": {
+        "baseline_mean": 160109.3,
+        "lower_threshold": 26596.76,
+        "upper_threshold": 293621.84
+      },
+      "PROD_0028": {
+        "baseline_mean": 159334.88,
+        "lower_threshold": 0,
+        "upper_threshold": 338357.96
+      },
+      "PROD_0037": {
+        "baseline_mean": 151031.68,
+        "lower_threshold": 0,
+        "upper_threshold": 316820.2
+      }
+    }
+  },
+  "baseline_statistics": {
+    "total_products_monitored": 500,
+    "anomaly_rate_percent": 4.32,
+    "high_frequency_anomaly_products": 30,
+    "revenue_impact_percent": 12.51
+  },
+  "category_anomaly_distribution": {
+    "Sports & Outdoors": 161,
+    "Electronics": 160,
+    "Clothing": 159,
+    "Home & Garden": 151,
+    "Books & Media": 146
+  },
+  "seasonal_patterns": {
+    "1": 13,
+    "2": 14,
+    "3": 53,
+    "4": 36,
+    "5": 51,
+    "6": 37,
+    "7": 42,
+    "8": 49,
+    "9": 40,
+    "10": 52,
+    "11": 187,
+    "12": 203
+  }
+}

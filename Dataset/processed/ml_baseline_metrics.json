@@ -1,87 +1,194 @@
 {
-  "temporal_analysis_date": "2025-08-14",
-  "data_period": {
-    "start_date": "2022-01-01",
-    "end_date": "2024-12-31",
-    "total_records": 777288
-  },
-  "seasonal_baselines": {
-    "monthly_seasonal_index": {
-      "1": 52.8,
-      "2": 50.3,
-      "3": 99.6,
-      "4": 92.8,
-      "5": 101.2,
-      "6": 86.0,
-      "7": 87.8,
-      "8": 92.1,
-      "9": 104.4,
-      "10": 110.0,
-      "11": 156.3,
-      "12": 166.7
+    "temporal_analysis_date": "2025-08-16",
+    "data_period": {
+        "start_date": "2022-01-01",
+        "end_date": "2024-12-31",
+        "total_records": 777288
     },
-    "peak_months": [
-      11,
-      12,
-      1
-    ],
-    "low_months": [
-      6,
-      7,
-      8
-    ],
-    "normal_range": [
-      90,
-      110
-    ]
-  },
-  "growth_baselines": {
-    "normal_monthly_growth": {
-      "mean": 9.447176821187634,
-      "std": 35.65737872286169,
-      "upper_threshold": 95.54157148015706,
-      "lower_threshold": -31.078332364535296
+    "seasonal_baselines": {
+        "monthly_seasonal_index": {
+            "1": 52.8,
+            "2": 50.3,
+            "3": 99.6,
+            "4": 92.8,
+            "5": 101.2,
+            "6": 86.0,
+            "7": 87.8,
+            "8": 92.1,
+            "9": 104.4,
+            "10": 110.0,
+            "11": 156.3,
+            "12": 166.7
+        },
+        "peak_months": [
+            11,
+            12,
+            1
+        ],
+        "low_months": [
+            6,
+            7,
+            8
+        ],
+        "normal_range": [
+            90,
+            110
+        ]
     },
-    "quarterly_patterns": {
-      "q1_typical": -40.0,
-      "q2_typical": 25.0,
-      "q3_typical": 15.0,
-      "q4_typical": 50.0
+    "growth_baselines": {
+        "normal_monthly_growth": {
+            "mean": 9.447176821187634,
+            "std": 35.65737872286169,
+            "upper_threshold": 95.54157148015706,
+            "lower_threshold": -31.078332364535296
+        },
+        "quarterly_patterns": {
+            "q1_typical": -40.0,
+            "q2_typical": 25.0,
+            "q3_typical": 15.0,
+            "q4_typical": 50.0
+        }
+    },
+    "daily_baselines": {
+        "weekday_index": {
+            "Monday": 97.7,
+            "Tuesday": 100.1,
+            "Wednesday": 126.7,
+            "Thursday": 125.7,
+            "Friday": 126.0,
+            "Saturday": 74.2,
+            "Sunday": 49.7
+        },
+        "business_days": [
+            "Wednesday",
+            "Thursday",
+            "Friday"
+        ],
+        "weekend_performance": 62.0,
+        "weekday_performance": 115.2
+    },
+    "revenue_thresholds": {
+        "daily_normal_range": {
+            "min": 179117.50959966952,
+            "max": 925435.5348308093
+        },
+        "monthly_normal_range": {
+            "min": 7153013.125,
+            "max": 23303658.76
+        }
+    },
+    "alert_thresholds": {
+        "revenue_spike_threshold": 200,
+        "revenue_drop_threshold": -50,
+        "transaction_anomaly": 150,
+        "weekend_anomaly": 150,
+        "off_season_spike": 250
+    },
+    "geographic_baselines": {
+        "analysis_date": "2025-08-16",
+        "section": "3.6_Geographic_Analysis",
+        "baseline_type": "regional_performance_monitoring",
+        "regional_performance": [
+            {
+                "region": "Central",
+                "total_revenue": 103520408.93,
+                "avg_transaction_value": 666.94,
+                "transaction_count": 155218,
+                "total_units_sold": 244169,
+                "record_count": 155218,
+                "market_share_pct": 20.2
+            },
+            {
+                "region": "East",
+                "total_revenue": 102294601.07,
+                "avg_transaction_value": 656.42,
+                "transaction_count": 155837,
+                "total_units_sold": 244537,
+                "record_count": 155837,
+                "market_share_pct": 20.0
+            },
+            {
+                "region": "North",
+                "total_revenue": 102275683.65,
+                "avg_transaction_value": 659.08,
+                "transaction_count": 155180,
+                "total_units_sold": 243899,
+                "record_count": 155180,
+                "market_share_pct": 20.0
+            },
+            {
+                "region": "South",
+                "total_revenue": 101886031.15,
+                "avg_transaction_value": 657.24,
+                "transaction_count": 155020,
+                "total_units_sold": 242170,
+                "record_count": 155020,
+                "market_share_pct": 19.9
+            },
+            {
+                "region": "West",
+                "total_revenue": 101408246.51,
+                "avg_transaction_value": 649.92,
+                "transaction_count": 156033,
+                "total_units_sold": 245046,
+                "record_count": 156033,
+                "market_share_pct": 19.8
+            }
+        ],
+        "monitoring_thresholds": {
+            "South": {
+                "daily_revenue_alert_low": 32214.69,
+                "daily_revenue_alert_high": 190504.41499999998,
+                "daily_transaction_alert_low": 55.0,
+                "daily_transaction_alert_high": 264.75,
+                "baseline_daily_revenue": 81753.17,
+                "baseline_daily_transactions": 135.0
+            },
+            "East": {
+                "daily_revenue_alert_low": 30921.045311390844,
+                "daily_revenue_alert_high": 190548.2300567555,
+                "daily_transaction_alert_low": 56.75,
+                "daily_transaction_alert_high": 268.75,
+                "baseline_daily_revenue": 82508.32,
+                "baseline_daily_transactions": 137.0
+            },
+            "West": {
+                "daily_revenue_alert_low": 32306.015,
+                "daily_revenue_alert_high": 193159.94658377004,
+                "daily_transaction_alert_low": 55.0,
+                "daily_transaction_alert_high": 272.25,
+                "baseline_daily_revenue": 82275.03,
+                "baseline_daily_transactions": 136.0
+            },
+            "Central": {
+                "daily_revenue_alert_low": 30696.1275,
+                "daily_revenue_alert_high": 191197.89500000002,
+                "daily_transaction_alert_low": 56.0,
+                "daily_transaction_alert_high": 273.25,
+                "baseline_daily_revenue": 84490.685,
+                "baseline_daily_transactions": 133.5
+            },
+            "North": {
+                "daily_revenue_alert_low": 29881.1,
+                "daily_revenue_alert_high": 195894.18676276488,
+                "daily_transaction_alert_low": 56.0,
+                "daily_transaction_alert_high": 271.25,
+                "baseline_daily_revenue": 83810.3228063045,
+                "baseline_daily_transactions": 134.5
+            }
+        },
+        "regional_insights": {
+            "market_leader": "Central",
+            "revenue_spread": 2112162.420000002,
+            "baseline_transaction_value": 657.9200000000001,
+            "total_regions_monitored": 5,
+            "geographic_stability": "High - minimal performance variance across regions"
+        },
+        "alert_rules": {
+            "revenue_anomaly_threshold": 2.0,
+            "transaction_anomaly_threshold": 2.0,
+            "cross_regional_correlation_minimum": 0.4,
+            "volatility_alert_threshold": 8
+        }
     }
-  },
-  "daily_baselines": {
-    "weekday_index": {
-      "Monday": 97.7,
-      "Tuesday": 100.1,
-      "Wednesday": 126.7,
-      "Thursday": 125.7,
-      "Friday": 126.0,
-      "Saturday": 74.2,
-      "Sunday": 49.7
-    },
-    "business_days": [
-      "Wednesday",
-      "Thursday",
-      "Friday"
-    ],
-    "weekend_performance": 62.0,
-    "weekday_performance": 115.2
-  },
-  "revenue_thresholds": {
-    "daily_normal_range": {
-      "min": 179117.50959966952,
-      "max": 925435.5348308093
-    },
-    "monthly_normal_range": {
-      "min": 7153013.125,
-      "max": 23303658.76
-    }
-  },
-  "alert_thresholds": {
-    "revenue_spike_threshold": 200,
-    "revenue_drop_threshold": -50,
-    "transaction_anomaly": 150,
-    "weekend_anomaly": 150,
-    "off_season_spike": 250
-  }
 }

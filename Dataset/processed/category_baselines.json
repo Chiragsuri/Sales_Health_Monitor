@@ -1,0 +1,1209 @@
+{
+  "category_baselines": [
+    {
+      "product_category": "Books & Media",
+      "revenue_mean": 391319.96,
+      "revenue_std": 128346.91,
+      "revenue_min": 186171.05,
+      "revenue_max": 656405.39,
+      "units_mean": 6789.72,
+      "units_std": 2217.77,
+      "txn_mean": 4314.58,
+      "txn_std": 1417.83,
+      "volatility_ratio": 0.32798457303327944
+    },
+    {
+      "product_category": "Clothing",
+      "revenue_mean": 1184368.42,
+      "revenue_std": 393245.34,
+      "revenue_min": 510943.42,
+      "revenue_max": 1970886.52,
+      "units_mean": 6773.28,
+      "units_std": 2226.11,
+      "txn_mean": 4325.94,
+      "txn_std": 1431.0,
+      "volatility_ratio": 0.33202957235215713
+    },
+    {
+      "product_category": "Electronics",
+      "revenue_mean": 8099872.36,
+      "revenue_std": 2707887.13,
+      "revenue_min": 3684013.63,
+      "revenue_max": 14054088.54,
+      "units_mean": 6787.92,
+      "units_std": 2290.28,
+      "txn_mean": 4320.64,
+      "txn_std": 1435.64,
+      "volatility_ratio": 0.3343123211882316
+    },
+    {
+      "product_category": "Home & Garden",
+      "revenue_mean": 1818592.24,
+      "revenue_std": 605239.45,
+      "revenue_min": 844380.61,
+      "revenue_max": 3321380.13,
+      "units_mean": 6763.78,
+      "units_std": 2232.38,
+      "txn_mean": 4316.17,
+      "txn_std": 1429.05,
+      "volatility_ratio": 0.33280657240679745
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "revenue_mean": 2710985.12,
+      "revenue_std": 964435.41,
+      "revenue_min": 1290982.09,
+      "revenue_max": 4882250.2,
+      "units_mean": 6769.22,
+      "units_std": 2320.87,
+      "txn_mean": 4314.0,
+      "txn_std": 1465.41,
+      "volatility_ratio": 0.35575090504369866
+    }
+  ],
+  "seasonal_patterns": [
+    {
+      "product_category": "Books & Media",
+      "year": 2022,
+      "month": 1,
+      "revenue_vs_yearly": 0.04394609270147016
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2022,
+      "month": 2,
+      "revenue_vs_yearly": 0.0399441230967764
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2022,
+      "month": 3,
+      "revenue_vs_yearly": 0.08588690808611306
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2022,
+      "month": 4,
+      "revenue_vs_yearly": 0.07386649755896525
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2022,
+      "month": 5,
+      "revenue_vs_yearly": 0.08527359671800888
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2022,
+      "month": 6,
+      "revenue_vs_yearly": 0.07121301867501138
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2022,
+      "month": 7,
+      "revenue_vs_yearly": 0.07995974291434402
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2022,
+      "month": 8,
+      "revenue_vs_yearly": 0.08218775613761298
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2022,
+      "month": 9,
+      "revenue_vs_yearly": 0.07780423480993147
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2022,
+      "month": 10,
+      "revenue_vs_yearly": 0.0926293585092426
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2022,
+      "month": 11,
+      "revenue_vs_yearly": 0.12970504278890035
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2022,
+      "month": 12,
+      "revenue_vs_yearly": 0.13758362800362342
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2023,
+      "month": 1,
+      "revenue_vs_yearly": 0.04237999394523515
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2023,
+      "month": 2,
+      "revenue_vs_yearly": 0.04039630688719716
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2023,
+      "month": 3,
+      "revenue_vs_yearly": 0.08789894729809074
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2023,
+      "month": 4,
+      "revenue_vs_yearly": 0.07736337594915417
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2023,
+      "month": 5,
+      "revenue_vs_yearly": 0.08787427975382589
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2023,
+      "month": 6,
+      "revenue_vs_yearly": 0.07098913929201062
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2023,
+      "month": 7,
+      "revenue_vs_yearly": 0.07217675618163213
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2023,
+      "month": 8,
+      "revenue_vs_yearly": 0.0731294681461368
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2023,
+      "month": 9,
+      "revenue_vs_yearly": 0.08949243752746307
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2023,
+      "month": 10,
+      "revenue_vs_yearly": 0.10061969305616743
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2023,
+      "month": 11,
+      "revenue_vs_yearly": 0.13099891871561767
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2023,
+      "month": 12,
+      "revenue_vs_yearly": 0.1266806832474692
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2024,
+      "month": 1,
+      "revenue_vs_yearly": 0.042525543447474626
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2024,
+      "month": 2,
+      "revenue_vs_yearly": 0.040167646431293766
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2024,
+      "month": 3,
+      "revenue_vs_yearly": 0.08371600213802337
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2024,
+      "month": 4,
+      "revenue_vs_yearly": 0.07167214895854332
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2024,
+      "month": 5,
+      "revenue_vs_yearly": 0.0868022058284027
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2024,
+      "month": 6,
+      "revenue_vs_yearly": 0.08311794670196207
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2024,
+      "month": 7,
+      "revenue_vs_yearly": 0.0829114994652248
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2024,
+      "month": 8,
+      "revenue_vs_yearly": 0.07260256521349752
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2024,
+      "month": 9,
+      "revenue_vs_yearly": 0.08456214468789838
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2024,
+      "month": 10,
+      "revenue_vs_yearly": 0.08709289709147475
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2024,
+      "month": 11,
+      "revenue_vs_yearly": 0.1387052268306606
+    },
+    {
+      "product_category": "Books & Media",
+      "year": 2024,
+      "month": 12,
+      "revenue_vs_yearly": 0.1261241732055441
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2022,
+      "month": 1,
+      "revenue_vs_yearly": 0.04378991204291782
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2022,
+      "month": 2,
+      "revenue_vs_yearly": 0.03835585905945768
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2022,
+      "month": 3,
+      "revenue_vs_yearly": 0.08901053915139126
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2022,
+      "month": 4,
+      "revenue_vs_yearly": 0.0782664260671588
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2022,
+      "month": 5,
+      "revenue_vs_yearly": 0.10334867208528319
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2022,
+      "month": 6,
+      "revenue_vs_yearly": 0.08281367719935358
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2022,
+      "month": 7,
+      "revenue_vs_yearly": 0.07001797482234437
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2022,
+      "month": 8,
+      "revenue_vs_yearly": 0.07989131135705996
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2022,
+      "month": 9,
+      "revenue_vs_yearly": 0.08282309161820135
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2022,
+      "month": 10,
+      "revenue_vs_yearly": 0.08076158165888345
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2022,
+      "month": 11,
+      "revenue_vs_yearly": 0.11986655635075903
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2022,
+      "month": 12,
+      "revenue_vs_yearly": 0.13105439858718956
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2023,
+      "month": 1,
+      "revenue_vs_yearly": 0.041290782440794614
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2023,
+      "month": 2,
+      "revenue_vs_yearly": 0.036777521488819444
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2023,
+      "month": 3,
+      "revenue_vs_yearly": 0.08811498701265884
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2023,
+      "month": 4,
+      "revenue_vs_yearly": 0.07184412258701581
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2023,
+      "month": 5,
+      "revenue_vs_yearly": 0.07741531127920846
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2023,
+      "month": 6,
+      "revenue_vs_yearly": 0.07241758090229211
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2023,
+      "month": 7,
+      "revenue_vs_yearly": 0.0751631745685461
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2023,
+      "month": 8,
+      "revenue_vs_yearly": 0.07590185190388303
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2023,
+      "month": 9,
+      "revenue_vs_yearly": 0.08905460225749352
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2023,
+      "month": 10,
+      "revenue_vs_yearly": 0.09020578852250101
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2023,
+      "month": 11,
+      "revenue_vs_yearly": 0.13995058231808802
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2023,
+      "month": 12,
+      "revenue_vs_yearly": 0.14186369471869908
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2024,
+      "month": 1,
+      "revenue_vs_yearly": 0.04252136869959433
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2024,
+      "month": 2,
+      "revenue_vs_yearly": 0.04194749924609552
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2024,
+      "month": 3,
+      "revenue_vs_yearly": 0.07706449824861777
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2024,
+      "month": 4,
+      "revenue_vs_yearly": 0.07354084160656003
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2024,
+      "month": 5,
+      "revenue_vs_yearly": 0.08617687157278411
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2024,
+      "month": 6,
+      "revenue_vs_yearly": 0.07057412090372109
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2024,
+      "month": 7,
+      "revenue_vs_yearly": 0.08229399125851214
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2024,
+      "month": 8,
+      "revenue_vs_yearly": 0.08188864039833224
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2024,
+      "month": 9,
+      "revenue_vs_yearly": 0.0898295984970365
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2024,
+      "month": 10,
+      "revenue_vs_yearly": 0.0993708279044824
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2024,
+      "month": 11,
+      "revenue_vs_yearly": 0.12709555605800965
+    },
+    {
+      "product_category": "Clothing",
+      "year": 2024,
+      "month": 12,
+      "revenue_vs_yearly": 0.1276961856062542
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2022,
+      "month": 1,
+      "revenue_vs_yearly": 0.04173645616060039
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2022,
+      "month": 2,
+      "revenue_vs_yearly": 0.04626232615982453
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2022,
+      "month": 3,
+      "revenue_vs_yearly": 0.081782002950289
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2022,
+      "month": 4,
+      "revenue_vs_yearly": 0.07440606125672164
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2022,
+      "month": 5,
+      "revenue_vs_yearly": 0.09192357348452765
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2022,
+      "month": 6,
+      "revenue_vs_yearly": 0.07690260074982799
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2022,
+      "month": 7,
+      "revenue_vs_yearly": 0.0764444297181491
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2022,
+      "month": 8,
+      "revenue_vs_yearly": 0.07840914623637141
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2022,
+      "month": 9,
+      "revenue_vs_yearly": 0.08470812475547669
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2022,
+      "month": 10,
+      "revenue_vs_yearly": 0.08184609767100075
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2022,
+      "month": 11,
+      "revenue_vs_yearly": 0.12536554655392665
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2022,
+      "month": 12,
+      "revenue_vs_yearly": 0.14021363430328415
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2023,
+      "month": 1,
+      "revenue_vs_yearly": 0.04381293233340179
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2023,
+      "month": 2,
+      "revenue_vs_yearly": 0.042773916770398795
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2023,
+      "month": 3,
+      "revenue_vs_yearly": 0.0816453991161366
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2023,
+      "month": 4,
+      "revenue_vs_yearly": 0.08312108519095787
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2023,
+      "month": 5,
+      "revenue_vs_yearly": 0.08249345041541624
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2023,
+      "month": 6,
+      "revenue_vs_yearly": 0.0660898266606639
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2023,
+      "month": 7,
+      "revenue_vs_yearly": 0.0710429698406951
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2023,
+      "month": 8,
+      "revenue_vs_yearly": 0.07466350155075024
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2023,
+      "month": 9,
+      "revenue_vs_yearly": 0.08531417415459369
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2023,
+      "month": 10,
+      "revenue_vs_yearly": 0.09951360803418104
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2023,
+      "month": 11,
+      "revenue_vs_yearly": 0.12421913519655119
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2023,
+      "month": 12,
+      "revenue_vs_yearly": 0.1453100007362535
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2024,
+      "month": 1,
+      "revenue_vs_yearly": 0.04812266867015798
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2024,
+      "month": 2,
+      "revenue_vs_yearly": 0.03798381102979664
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2024,
+      "month": 3,
+      "revenue_vs_yearly": 0.07888063432403253
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2024,
+      "month": 4,
+      "revenue_vs_yearly": 0.077726847882614
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2024,
+      "month": 5,
+      "revenue_vs_yearly": 0.07954000724014834
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2024,
+      "month": 6,
+      "revenue_vs_yearly": 0.07025312486236365
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2024,
+      "month": 7,
+      "revenue_vs_yearly": 0.07362819500959393
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2024,
+      "month": 8,
+      "revenue_vs_yearly": 0.07614886145226506
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2024,
+      "month": 9,
+      "revenue_vs_yearly": 0.09250117842194411
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2024,
+      "month": 10,
+      "revenue_vs_yearly": 0.09474813914910386
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2024,
+      "month": 11,
+      "revenue_vs_yearly": 0.13504200601518435
+    },
+    {
+      "product_category": "Electronics",
+      "year": 2024,
+      "month": 12,
+      "revenue_vs_yearly": 0.13542452594279555
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2022,
+      "month": 1,
+      "revenue_vs_yearly": 0.04931934785690294
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2022,
+      "month": 2,
+      "revenue_vs_yearly": 0.03873384779306573
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2022,
+      "month": 3,
+      "revenue_vs_yearly": 0.08782890893431346
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2022,
+      "month": 4,
+      "revenue_vs_yearly": 0.07880830849831666
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2022,
+      "month": 5,
+      "revenue_vs_yearly": 0.08468901066969084
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2022,
+      "month": 6,
+      "revenue_vs_yearly": 0.06787612713933047
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2022,
+      "month": 7,
+      "revenue_vs_yearly": 0.06960956172702394
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2022,
+      "month": 8,
+      "revenue_vs_yearly": 0.07594844108427479
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2022,
+      "month": 9,
+      "revenue_vs_yearly": 0.08227466396466676
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2022,
+      "month": 10,
+      "revenue_vs_yearly": 0.08901374089791741
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2022,
+      "month": 11,
+      "revenue_vs_yearly": 0.12528778573250282
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2022,
+      "month": 12,
+      "revenue_vs_yearly": 0.1506102557019942
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2023,
+      "month": 1,
+      "revenue_vs_yearly": 0.040768968257647364
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2023,
+      "month": 2,
+      "revenue_vs_yearly": 0.03834237993456093
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2023,
+      "month": 3,
+      "revenue_vs_yearly": 0.08851691810964672
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2023,
+      "month": 4,
+      "revenue_vs_yearly": 0.0688983737094704
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2023,
+      "month": 5,
+      "revenue_vs_yearly": 0.08376172787780853
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2023,
+      "month": 6,
+      "revenue_vs_yearly": 0.07396255030665724
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2023,
+      "month": 7,
+      "revenue_vs_yearly": 0.06828540557653849
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2023,
+      "month": 8,
+      "revenue_vs_yearly": 0.09012660698250279
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2023,
+      "month": 9,
+      "revenue_vs_yearly": 0.08519790482786582
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2023,
+      "month": 10,
+      "revenue_vs_yearly": 0.09126857871965575
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2023,
+      "month": 11,
+      "revenue_vs_yearly": 0.1318492274230567
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2023,
+      "month": 12,
+      "revenue_vs_yearly": 0.13902135827458934
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2024,
+      "month": 1,
+      "revenue_vs_yearly": 0.04803716419761557
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2024,
+      "month": 2,
+      "revenue_vs_yearly": 0.05511669107329618
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2024,
+      "month": 3,
+      "revenue_vs_yearly": 0.08189474786371277
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2024,
+      "month": 4,
+      "revenue_vs_yearly": 0.0848903101607756
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2024,
+      "month": 5,
+      "revenue_vs_yearly": 0.08262766901455534
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2024,
+      "month": 6,
+      "revenue_vs_yearly": 0.06991254352265568
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2024,
+      "month": 7,
+      "revenue_vs_yearly": 0.0739638130842025
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2024,
+      "month": 8,
+      "revenue_vs_yearly": 0.07398020674326226
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2024,
+      "month": 9,
+      "revenue_vs_yearly": 0.08009289275999305
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2024,
+      "month": 10,
+      "revenue_vs_yearly": 0.08964670989069996
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2024,
+      "month": 11,
+      "revenue_vs_yearly": 0.1317833924942915
+    },
+    {
+      "product_category": "Home & Garden",
+      "year": 2024,
+      "month": 12,
+      "revenue_vs_yearly": 0.12805385919493967
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2022,
+      "month": 1,
+      "revenue_vs_yearly": 0.045546036776893166
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2022,
+      "month": 2,
+      "revenue_vs_yearly": 0.03975749635083788
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2022,
+      "month": 3,
+      "revenue_vs_yearly": 0.08455237538183301
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2022,
+      "month": 4,
+      "revenue_vs_yearly": 0.0800132026798713
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2022,
+      "month": 5,
+      "revenue_vs_yearly": 0.07923954323545884
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2022,
+      "month": 6,
+      "revenue_vs_yearly": 0.0768690813068074
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2022,
+      "month": 7,
+      "revenue_vs_yearly": 0.06669959243345938
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2022,
+      "month": 8,
+      "revenue_vs_yearly": 0.07623426923274107
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2022,
+      "month": 9,
+      "revenue_vs_yearly": 0.08620423174350002
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2022,
+      "month": 10,
+      "revenue_vs_yearly": 0.09216547585184157
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2022,
+      "month": 11,
+      "revenue_vs_yearly": 0.1335653606275859
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2022,
+      "month": 12,
+      "revenue_vs_yearly": 0.13915333437917052
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2023,
+      "month": 1,
+      "revenue_vs_yearly": 0.040829111926768066
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2023,
+      "month": 2,
+      "revenue_vs_yearly": 0.04225488924661218
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2023,
+      "month": 3,
+      "revenue_vs_yearly": 0.08333039025914485
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2023,
+      "month": 4,
+      "revenue_vs_yearly": 0.07404279754022444
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2023,
+      "month": 5,
+      "revenue_vs_yearly": 0.08247273436540499
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2023,
+      "month": 6,
+      "revenue_vs_yearly": 0.07532489021335169
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2023,
+      "month": 7,
+      "revenue_vs_yearly": 0.065890896085818
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2023,
+      "month": 8,
+      "revenue_vs_yearly": 0.07695547472612659
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2023,
+      "month": 9,
+      "revenue_vs_yearly": 0.09180114755912656
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2023,
+      "month": 10,
+      "revenue_vs_yearly": 0.09626267754739
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2023,
+      "month": 11,
+      "revenue_vs_yearly": 0.141675178073984
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2023,
+      "month": 12,
+      "revenue_vs_yearly": 0.12915981245604868
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2024,
+      "month": 1,
+      "revenue_vs_yearly": 0.03950894508307409
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2024,
+      "month": 2,
+      "revenue_vs_yearly": 0.039919794585200466
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2024,
+      "month": 3,
+      "revenue_vs_yearly": 0.09046813264122604
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2024,
+      "month": 4,
+      "revenue_vs_yearly": 0.07297271984845843
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2024,
+      "month": 5,
+      "revenue_vs_yearly": 0.08162189920287867
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2024,
+      "month": 6,
+      "revenue_vs_yearly": 0.06368406949953449
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2024,
+      "month": 7,
+      "revenue_vs_yearly": 0.08132034708913664
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2024,
+      "month": 8,
+      "revenue_vs_yearly": 0.07021181455445406
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2024,
+      "month": 9,
+      "revenue_vs_yearly": 0.08894320393676845
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2024,
+      "month": 10,
+      "revenue_vs_yearly": 0.0887812563473907
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2024,
+      "month": 11,
+      "revenue_vs_yearly": 0.1365403943600427
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "year": 2024,
+      "month": 12,
+      "revenue_vs_yearly": 0.14602742285183531
+    }
+  ],
+  "category_rank": [
+    {
+      "product_category": "Electronics",
+      "revenue_mean": 8099872.36,
+      "revenue_std": 2707887.13,
+      "revenue_min": 3684013.63,
+      "revenue_max": 14054088.54,
+      "units_mean": 6787.92,
+      "units_std": 2290.28,
+      "txn_mean": 4320.64,
+      "txn_std": 1435.64,
+      "volatility_ratio": 0.3343123211882316
+    },
+    {
+      "product_category": "Sports & Outdoors",
+      "revenue_mean": 2710985.12,
+      "revenue_std": 964435.41,
+      "revenue_min": 1290982.09,
+      "revenue_max": 4882250.2,
+      "units_mean": 6769.22,
+      "units_std": 2320.87,
+      "txn_mean": 4314.0,
+      "txn_std": 1465.41,
+      "volatility_ratio": 0.35575090504369866
+    },
+    {
+      "product_category": "Home & Garden",
+      "revenue_mean": 1818592.24,
+      "revenue_std": 605239.45,
+      "revenue_min": 844380.61,
+      "revenue_max": 3321380.13,
+      "units_mean": 6763.78,
+      "units_std": 2232.38,
+      "txn_mean": 4316.17,
+      "txn_std": 1429.05,
+      "volatility_ratio": 0.33280657240679745
+    },
+    {
+      "product_category": "Clothing",
+      "revenue_mean": 1184368.42,
+      "revenue_std": 393245.34,
+      "revenue_min": 510943.42,
+      "revenue_max": 1970886.52,
+      "units_mean": 6773.28,
+      "units_std": 2226.11,
+      "txn_mean": 4325.94,
+      "txn_std": 1431.0,
+      "volatility_ratio": 0.33202957235215713
+    },
+    {
+      "product_category": "Books & Media",
+      "revenue_mean": 391319.96,
+      "revenue_std": 128346.91,
+      "revenue_min": 186171.05,
+      "revenue_max": 656405.39,
+      "units_mean": 6789.72,
+      "units_std": 2217.77,
+      "txn_mean": 4314.58,
+      "txn_std": 1417.83,
+      "volatility_ratio": 0.32798457303327944
+    }
+  ],
+  "export_timestamp": "2025-08-16T22:10:20.788816"
+}

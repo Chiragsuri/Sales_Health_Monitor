@@ -1,0 +1,207 @@
+{
+  "segment_baselines": [
+    {
+      "customer_segment": "Budget",
+      "total_revenue": 128656206.7,
+      "avg_transaction_value": 665.6,
+      "revenue_std": 3339.81,
+      "total_units": 304540,
+      "avg_units_per_transaction": 1.58,
+      "transaction_count": 193294,
+      "market_share_pct": 25.2,
+      "revenue_volatility": 5.017743389423076,
+      "avg_basket_size": 1.5755274348919264
+    },
+    {
+      "customer_segment": "Premium",
+      "total_revenue": 75982884.78,
+      "avg_transaction_value": 658.04,
+      "revenue_std": 3504.82,
+      "total_units": 181797,
+      "avg_units_per_transaction": 1.57,
+      "transaction_count": 115468,
+      "market_share_pct": 14.9,
+      "revenue_volatility": 5.326150385994773,
+      "avg_basket_size": 1.5744362074340943
+    },
+    {
+      "customer_segment": "Standard",
+      "total_revenue": 306745879.81,
+      "avg_transaction_value": 654.7,
+      "revenue_std": 3107.17,
+      "total_units": 733484,
+      "avg_units_per_transaction": 1.57,
+      "transaction_count": 468526,
+      "market_share_pct": 60.0,
+      "revenue_volatility": 4.745944707499618,
+      "avg_basket_size": 1.565513973610856
+    }
+  ],
+  "channel_performance": [
+    {
+      "customer_segment": "Budget",
+      "sales_channel": "Mobile App",
+      "total_amount": 32629178.14629692,
+      "transaction_id": 48150
+    },
+    {
+      "customer_segment": "Budget",
+      "sales_channel": "Online",
+      "total_amount": 32140401.6453914,
+      "transaction_id": 48337
+    },
+    {
+      "customer_segment": "Budget",
+      "sales_channel": "Phone Orders",
+      "total_amount": 32735861.60541481,
+      "transaction_id": 48528
+    },
+    {
+      "customer_segment": "Budget",
+      "sales_channel": "Retail Store",
+      "total_amount": 31150765.30514313,
+      "transaction_id": 48279
+    },
+    {
+      "customer_segment": "Premium",
+      "sales_channel": "Mobile App",
+      "total_amount": 18686385.2705637,
+      "transaction_id": 29037
+    },
+    {
+      "customer_segment": "Premium",
+      "sales_channel": "Online",
+      "total_amount": 19432138.576799482,
+      "transaction_id": 28683
+    },
+    {
+      "customer_segment": "Premium",
+      "sales_channel": "Phone Orders",
+      "total_amount": 18431400.501838993,
+      "transaction_id": 28962
+    },
+    {
+      "customer_segment": "Premium",
+      "sales_channel": "Retail Store",
+      "total_amount": 19432960.434063677,
+      "transaction_id": 28786
+    },
+    {
+      "customer_segment": "Standard",
+      "sales_channel": "Mobile App",
+      "total_amount": 76885038.78314221,
+      "transaction_id": 116937
+    },
+    {
+      "customer_segment": "Standard",
+      "sales_channel": "Online",
+      "total_amount": 77111555.84374678,
+      "transaction_id": 117410
+    },
+    {
+      "customer_segment": "Standard",
+      "sales_channel": "Phone Orders",
+      "total_amount": 75050649.54605472,
+      "transaction_id": 116503
+    },
+    {
+      "customer_segment": "Standard",
+      "sales_channel": "Retail Store",
+      "total_amount": 77698635.63796625,
+      "transaction_id": 117676
+    }
+  ],
+  "regional_distribution": [
+    {
+      "customer_segment": "Budget",
+      "region": "Central",
+      "total_amount": 26147848.673250284,
+      "transaction_id": 38680
+    },
+    {
+      "customer_segment": "Budget",
+      "region": "East",
+      "total_amount": 25435629.70158315,
+      "transaction_id": 38627
+    },
+    {
+      "customer_segment": "Budget",
+      "region": "North",
+      "total_amount": 25661471.546971966,
+      "transaction_id": 38616
+    },
+    {
+      "customer_segment": "Budget",
+      "region": "South",
+      "total_amount": 26102671.825658437,
+      "transaction_id": 38691
+    },
+    {
+      "customer_segment": "Budget",
+      "region": "West",
+      "total_amount": 25308584.95478242,
+      "transaction_id": 38680
+    },
+    {
+      "customer_segment": "Premium",
+      "region": "Central",
+      "total_amount": 15381614.838742262,
+      "transaction_id": 23021
+    },
+    {
+      "customer_segment": "Premium",
+      "region": "East",
+      "total_amount": 15677360.953417908,
+      "transaction_id": 23364
+    },
+    {
+      "customer_segment": "Premium",
+      "region": "North",
+      "total_amount": 14968014.961963747,
+      "transaction_id": 23057
+    },
+    {
+      "customer_segment": "Premium",
+      "region": "South",
+      "total_amount": 15015392.289059874,
+      "transaction_id": 22921
+    },
+    {
+      "customer_segment": "Premium",
+      "region": "West",
+      "total_amount": 14940501.740082059,
+      "transaction_id": 23105
+    },
+    {
+      "customer_segment": "Standard",
+      "region": "Central",
+      "total_amount": 61990945.41601961,
+      "transaction_id": 93517
+    },
+    {
+      "customer_segment": "Standard",
+      "region": "East",
+      "total_amount": 61181610.41230395,
+      "transaction_id": 93846
+    },
+    {
+      "customer_segment": "Standard",
+      "region": "North",
+      "total_amount": 61646197.13738156,
+      "transaction_id": 93507
+    },
+    {
+      "customer_segment": "Standard",
+      "region": "South",
+      "total_amount": 60767967.03101113,
+      "transaction_id": 93408
+    },
+    {
+      "customer_segment": "Standard",
+      "region": "West",
+      "total_amount": 61159159.81419372,
+      "transaction_id": 94248
+    }
+  ],
+  "analysis_timestamp": "2025-08-16T22:24:20.464349"
+}
