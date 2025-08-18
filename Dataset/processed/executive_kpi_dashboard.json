@@ -1,0 +1,56 @@
+{
+  "temporal_intelligence": {
+    "seasonal_peaks": "Nov-Dec-Jan (140-160% above average)",
+    "business_cycle": "Mid-week dominance, weekend drops (-46%)",
+    "growth_variance": "-50% to +200% normal range",
+    "monitoring_status": "Active"
+  },
+  "geographic_intelligence": {
+    "leading_region": "Central",
+    "leading_region_revenue": 103520408.93,
+    "total_regional_revenue": 511384971.30999994,
+    "regional_balance": "High (2.1% variance)",
+    "monitoring_regions": 5
+  },
+  "revenue_intelligence": {
+    "projected_annual_revenue": 170461657.20000002,
+    "leading_category": "Electronics",
+    "leading_category_monthly": 8099872.36,
+    "leading_segment": "Standard",
+    "leading_segment_share": 60.0,
+    "electronics_dominance": 57.020722382135794
+  },
+  "customer_intelligence": {
+    "total_customers": 50000,
+    "high_value_customers": 10000,
+    "high_value_percentage": 20.0,
+    "high_value_revenue_share": 32.4,
+    "critical_health_customers": 49,
+    "customer_health_monitoring": "Active (0-100 scale)"
+  },
+  "risk_intelligence": {
+    "product_anomaly_rate": 4.32,
+    "behavioral_anomaly_count": 3549,
+    "high_value_urgent_cases": 893,
+    "monitoring_dimensions": 5,
+    "monitoring_status": "Automated across all dimensions"
+  },
+  "strategic_metrics": {
+    "portfolio_volatility": 0.3365767888048328,
+    "ml_baseline_coverage": "5-dimensional comprehensive",
+    "automated_alert_system": "Multi-threshold active",
+    "data_integration_sources": 9
+  },
+  "dashboard_timestamp": "2025-08-17T16:03:25.986960",
+  "data_sources": [
+    "ml_baseline_metrics.json",
+    "03_Regional_Baseline_Summary.csv",
+    "product_anomaly_metrics.json",
+    "category_baselines.json",
+    "customer_segment_baselines.json",
+    "customer_rfm_analysis.json",
+    "customer_value_tiers.json",
+    "behavioral_anomalies.json",
+    "customer_baseline_comprehensive.json"
+  ]
+}

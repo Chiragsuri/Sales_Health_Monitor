@@ -1,0 +1,8 @@
+KPI_Category,KPI_Name,KPI_Value,KPI_Format
+Revenue,Annual Projection,170461657.20000002,Currency
+Revenue,Leading Category,Electronics,Text
+Customer,Total Customers,50000,Number
+Customer,High Value Revenue %,32.4,Percentage
+Risk,Product Anomaly Rate,4.32,Percentage
+Risk,Behavioral Anomalies,3549,Number
+Geographic,Leading Region,Central,Text

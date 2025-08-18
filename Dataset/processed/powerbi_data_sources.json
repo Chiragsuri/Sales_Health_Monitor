@@ -1,0 +1,40 @@
+{
+  "primary_data_sources": {
+    "sales_cleaned.csv": {
+      "description": "Main sales transaction data (existing file)",
+      "usage": "Primary dataset - create time features in Power BI",
+      "key_fields": [
+        "transaction_id",
+        "customer_id",
+        "product_id",
+        "transaction_date"
+      ],
+      "measure_fields": [
+        "total_amount",
+        "quantity",
+        "unit_price"
+      ]
+    },
+    "03_Regional_Baseline_Summary.csv": {
+      "description": "Regional performance metrics (existing file)",
+      "usage": "Geographic analysis and regional KPIs",
+      "key_metrics": [
+        "total_revenue",
+        "avg_transaction_value",
+        "market_share_pct"
+      ]
+    }
+  },
+  "supplementary_exports": {
+    "powerbi_kpi_summary.csv": {
+      "description": "Executive KPI metrics for dashboard cards",
+      "purpose": "Fast-loading executive overview",
+      "record_count": 7
+    },
+    "powerbi_monthly_trends.csv": {
+      "description": "Pre-aggregated monthly performance trends",
+      "purpose": "Optimized trend visualization",
+      "record_count": 36
+    }
+  }
+}

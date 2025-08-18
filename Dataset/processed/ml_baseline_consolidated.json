@@ -1,0 +1,22 @@
+{
+  "export_metadata": {
+    "export_timestamp": "2025-08-17T17:19:55.464467",
+    "baseline_version": "v1.0_comprehensive",
+    "total_baseline_files": 6
+  },
+  "baseline_sources": {
+    "temporal_geographic": "../Dataset/processed/ml_baseline_metrics.json",
+    "regional_summary": "../Dataset/processed/03_Regional_Baseline_Summary.csv",
+    "category_baselines": "../Dataset/processed/category_baselines.json",
+    "product_anomalies": "../Dataset/processed/product_anomaly_metrics.json",
+    "customer_segments": "../Dataset/processed/customer_segment_baselines.json",
+    "customer_comprehensive": "../Dataset/processed/customer_baseline_comprehensive.json"
+  },
+  "ml_readiness_status": {
+    "temporal_baselines": "Ready",
+    "geographic_baselines": "Ready",
+    "product_baselines": "Ready",
+    "customer_baselines": "Ready",
+    "integration_status": "Complete"
+  }
+}
