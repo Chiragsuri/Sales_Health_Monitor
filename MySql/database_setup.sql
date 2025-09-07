@@ -299,7 +299,7 @@ DELETE FROM products WHERE product_id = 'PROD0001';
 -- SETUP COMPLETION CONFIRMATION
 -- =============================================================
 SELECT 'DATABASE SETUP COMPLETE' as Status,
-       'Ready for Phase 5 Day 2 - Data Import' as Next_Step,
+       'Ready for Phase 5 Section 2 - Data Import' as Next_Step,
        NOW() as Completed_At;
 
 /*
