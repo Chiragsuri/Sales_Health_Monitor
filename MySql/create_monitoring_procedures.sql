@@ -89,7 +89,7 @@ CREATE TABLE monitoring_config (
 -- Table 2: Monitoring Alerts
 CREATE TABLE monitoring_alerts (
     alert_id INT AUTO_INCREMENT PRIMARY KEY COMMENT 'Unique alert identifier',
-    config_id INT NOT NULL COMMENT 'Links to monitoring_config',
+    config_id INT COMMENT 'Links to monitoring_config',
     alert_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     alert_type VARCHAR(50) NOT NULL COMMENT 'Type of anomaly detected',
     entity_id VARCHAR(50) COMMENT 'Affected entity (customer_id, region, etc.)',
@@ -104,8 +104,7 @@ CREATE TABLE monitoring_alerts (
     
     INDEX idx_alert_timestamp (alert_timestamp),
     INDEX idx_alert_status (status, severity),
-    INDEX idx_entity_alerts (entity_id, alert_type),
-    FOREIGN KEY (config_id) REFERENCES monitoring_config(config_id)
+    INDEX idx_entity_alerts (entity_id, alert_type)
 ) ENGINE=InnoDB COMMENT='Active and historical monitoring alerts';
 
 -- Table 3: Monitoring Execution Log
@@ -453,21 +452,20 @@ BEGIN
     -- Log procedure start
     INSERT INTO monitoring_log (procedure_name, execution_status)
     VALUES ('sp_monitor_category_performance', 'running');
-    
     SET v_log_id = LAST_INSERT_ID();
     
     -- Get dynamic date range
-    SELECT MIN(transaction_date), MAX(transaction_date) INTO v_start_date, v_eval_date 
+    SELECT MIN(transaction_date), MAX(transaction_date) INTO v_start_date, v_eval_date
     FROM sales_transactions;
     
     -- Check Electronics category for anomalies using dynamic dates
-    SELECT 
-        COALESCE(SUM(CASE WHEN transaction_date = v_eval_date THEN total_amount END), 0),
+    SELECT
+        COALESCE(SUM(CASE WHEN date = v_eval_date THEN daily_electronics END), 0),
         AVG(daily_electronics)
     INTO v_current_revenue, v_avg_revenue
     FROM (
         SELECT DATE(transaction_date) as date, SUM(total_amount) as daily_electronics
-        FROM sales_transactions 
+        FROM sales_transactions
         WHERE product_category = 'Electronics'
         AND transaction_date >= DATE_SUB(v_eval_date, INTERVAL 30 DAY)
         AND transaction_date <= v_eval_date
@@ -483,8 +481,8 @@ BEGIN
         -- Alert for significant Electronics category anomalies
         IF ABS(v_deviation_pct) > 50 THEN
             INSERT INTO monitoring_alerts (config_id, alert_type, entity_id, current_value, baseline_value, deviation_pct, severity, alert_message)
-            SELECT 
-                config_id, 
+            SELECT
+                config_id,
                 CASE WHEN v_deviation_pct > 0 THEN 'category_spike' ELSE 'category_drop' END,
                 'Electronics',
                 v_current_revenue,
@@ -492,7 +490,7 @@ BEGIN
                 v_deviation_pct,
                 CASE WHEN ABS(v_deviation_pct) > 100 THEN 'high' ELSE 'medium' END,
                 CONCAT('Electronics category anomaly on ', v_eval_date, ': ', FORMAT(v_current_revenue, 0), ' vs 30-day avg ', FORMAT(v_avg_revenue, 0), ' (', ROUND(v_deviation_pct, 1), '% change)')
-            FROM monitoring_config 
+            FROM monitoring_config
             WHERE monitor_type = 'product' AND is_active = TRUE
             LIMIT 1;
             
@@ -501,8 +499,8 @@ BEGIN
     END IF;
     
     -- Update monitoring log
-    UPDATE monitoring_log 
-    SET execution_end = NOW(), 
+    UPDATE monitoring_log
+    SET execution_end = NOW(),
         execution_status = 'completed',
         records_checked = v_total_checked,
         alerts_generated = v_alerts_created
@@ -639,7 +637,7 @@ SELECT
     ma.alert_message,
     TIMESTAMPDIFF(HOUR, ma.alert_timestamp, NOW()) as hours_since_alert
 FROM monitoring_alerts ma
-JOIN monitoring_config mc ON ma.config_id = mc.config_id
+LEFT JOIN monitoring_config mc ON ma.config_id = mc.config_id
 WHERE ma.status IN ('new', 'acknowledged')
 ORDER BY FIELD(ma.severity, 'critical', 'high', 'medium', 'low'), ma.alert_timestamp DESC;
 
@@ -760,7 +758,6 @@ SELECT
     END as sales_data_status;
 
 /*
-
 =============================================================
 AUTOMATED MONITORING SYSTEM COMPLETE
 =============================================================
@@ -822,5 +819,4 @@ SELECT * FROM v_monitoring_summary;
 SET SQL_SAFE_UPDATES = 1;
 
 =============================================================
-
 */
