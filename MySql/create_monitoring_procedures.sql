@@ -219,11 +219,10 @@ BEGIN
     SET v_eval_date = v_end_date;
     
     -- Get baseline revenue from available ML baselines
-    SELECT baseline_value INTO v_baseline_revenue
+    SELECT baseline_value / 365 INTO v_baseline_revenue
     FROM ml_baselines 
-    WHERE dimension IN ('revenue_intelligence', 'revenue_thresholds', 'temporal_intelligence')
-    AND metric_name LIKE '%revenue%'
-    ORDER BY baseline_value DESC
+    WHERE dimension = 'revenue_intelligence'
+    AND metric_name = 'projected_annual_revenue'
     LIMIT 1;
     
     -- Get actual revenue for evaluation date
@@ -240,11 +239,11 @@ BEGIN
         SET v_deviation_pct = 0;
     END IF;
     
-    -- Check for revenue spike alert
-    IF v_deviation_pct > 200 THEN
+    -- Alert for significant revenue spike (300% above daily average)
+    IF v_deviation_pct > 300 THEN
         INSERT INTO monitoring_alerts (config_id, alert_type, entity_id, current_value, baseline_value, deviation_pct, severity, alert_message)
         SELECT config_id, 'revenue_spike', 'daily_revenue', v_current_revenue, v_baseline_revenue, v_deviation_pct, 'high',
-               CONCAT('Revenue spike detected on ', v_eval_date, ': ', FORMAT(v_current_revenue, 2), ' vs baseline ', FORMAT(v_baseline_revenue, 2), ' (', ROUND(v_deviation_pct, 1), '% increase)')
+               CONCAT('Revenue spike detected on ', v_eval_date, ': ', FORMAT(v_current_revenue, 2), ' vs daily avg ', FORMAT(v_baseline_revenue, 2), ' (', ROUND(v_deviation_pct, 1), '% increase)')
         FROM monitoring_config 
         WHERE monitor_type = 'revenue' AND is_active = TRUE
         LIMIT 1;
@@ -252,11 +251,11 @@ BEGIN
         SET v_alerts_created = v_alerts_created + 1;
     END IF;
     
-    -- Check for revenue drop alert
-    IF v_deviation_pct < -50 THEN
+   -- Alert for significant revenue drop (70% below daily average)
+    IF v_deviation_pct < -70 THEN
         INSERT INTO monitoring_alerts (config_id, alert_type, entity_id, current_value, baseline_value, deviation_pct, severity, alert_message)
         SELECT config_id, 'revenue_drop', 'daily_revenue', v_current_revenue, v_baseline_revenue, v_deviation_pct, 'critical',
-               CONCAT('Revenue drop detected on ', v_eval_date, ': ', FORMAT(v_current_revenue, 2), ' vs baseline ', FORMAT(v_baseline_revenue, 2), ' (', ROUND(v_deviation_pct, 1), '% decrease)')
+               CONCAT('Revenue drop detected on ', v_eval_date, ': ', FORMAT(v_current_revenue, 2), ' vs daily avg ', FORMAT(v_baseline_revenue, 2), ' (', ROUND(v_deviation_pct, 1), '% decrease)')
         FROM monitoring_config 
         WHERE monitor_type = 'revenue' AND is_active = TRUE
         LIMIT 1;
@@ -276,7 +275,7 @@ BEGIN
     SELECT 'Daily Revenue Monitoring Complete' as status,
            v_eval_date as evaluation_date,
            v_current_revenue as current_revenue,
-           v_baseline_revenue as baseline_revenue,
+           v_baseline_revenue as daily_avg_baseline,
            v_deviation_pct as deviation_percentage,
            v_alerts_created as alerts_generated;
 END //
@@ -359,23 +358,53 @@ END //
 CREATE PROCEDURE sp_monitor_customer_health()
 MODIFIES SQL DATA
 DETERMINISTIC
-COMMENT 'Monitor customer health scores and churn risk indicators'
+COMMENT 'Monitor customer health with ADAPTIVE percentile-based thresholds'
 BEGIN
     DECLARE v_log_id INT;
     DECLARE v_total_checked INT DEFAULT 0;
     DECLARE v_alerts_created INT DEFAULT 0;
     DECLARE v_eval_date DATE;
+    DECLARE v_critical_threshold DECIMAL(5,2);
+    DECLARE v_high_value_threshold DECIMAL(5,2);
+    DECLARE v_critical_offset INT;
+    DECLARE v_hv_offset INT;
     
     -- Log procedure start
     INSERT INTO monitoring_log (procedure_name, execution_status)
     VALUES ('sp_monitor_customer_health', 'running');
-    
     SET v_log_id = LAST_INSERT_ID();
     
     -- Get evaluation date
     SELECT MAX(transaction_date) INTO v_eval_date FROM sales_transactions;
     
-    -- Monitor critical customer health scores
+    -- ✅ ADAPTIVE: Calculate bottom 1% threshold for critical alerts
+    SELECT FLOOR(COUNT(*) * 0.01) INTO v_critical_offset
+    FROM customer_baselines WHERE customer_health_score IS NOT NULL;
+    
+    SELECT customer_health_score INTO v_critical_threshold
+    FROM customer_baselines
+    WHERE customer_health_score IS NOT NULL
+    ORDER BY customer_health_score ASC
+    LIMIT 1 OFFSET v_critical_offset;
+    
+    -- ✅ ADAPTIVE: Calculate bottom 10% threshold for High Value customers
+    SELECT FLOOR(COUNT(*) * 0.10) INTO v_hv_offset
+    FROM customer_baselines 
+    WHERE value_tier IN ('High Value', 'Premium') 
+    AND customer_health_score IS NOT NULL;
+    
+    SELECT customer_health_score INTO v_high_value_threshold
+    FROM customer_baselines
+    WHERE value_tier IN ('High Value', 'Premium')
+    AND customer_health_score IS NOT NULL
+    ORDER BY customer_health_score ASC
+    LIMIT 1 OFFSET v_hv_offset;
+    
+    -- Use calculated thresholds (falls back to safe defaults if null)
+    SET v_critical_threshold = COALESCE(v_critical_threshold, 25);
+    SET v_high_value_threshold = COALESCE(v_high_value_threshold, 50);
+    
+    -- Monitor critical customer health scores (bottom 1%)
     INSERT INTO monitoring_alerts (config_id, alert_type, entity_id, current_value, severity, alert_message)
     SELECT 
         mc.config_id,
@@ -383,10 +412,10 @@ BEGIN
         cb.customer_id,
         cb.customer_health_score,
         'critical',
-        CONCAT('Customer ', cb.customer_id, ' has critical health score: ', ROUND(cb.customer_health_score, 1), ' (Value Tier: ', cb.value_tier, ', Eval Date: ', v_eval_date, ')')
+        CONCAT('Customer ', cb.customer_id, ' in bottom 1%: ', ROUND(cb.customer_health_score, 1), ' (Threshold: ', ROUND(v_critical_threshold, 1), ', Value Tier: ', cb.value_tier, ')')
     FROM customer_baselines cb
     JOIN monitoring_config mc ON mc.monitor_type = 'customer' AND mc.monitor_name = 'Critical Customer Health Score' AND mc.is_active = TRUE
-    WHERE cb.customer_health_score < 25 
+    WHERE cb.customer_health_score <= v_critical_threshold
     AND cb.customer_id NOT IN (
         SELECT entity_id FROM monitoring_alerts 
         WHERE alert_type = 'critical_health_score' 
@@ -395,9 +424,9 @@ BEGIN
     );
     
     SET v_alerts_created = ROW_COUNT();
-    SET v_total_checked = (SELECT COUNT(*) FROM customer_baselines WHERE customer_health_score < 25);
+    SET v_total_checked = (SELECT COUNT(*) FROM customer_baselines WHERE customer_health_score <= v_critical_threshold);
     
-    -- Monitor high-value customers at risk
+    -- Monitor high-value customers at risk (bottom 10%)
     INSERT INTO monitoring_alerts (config_id, alert_type, entity_id, current_value, severity, alert_message)
     SELECT 
         mc.config_id,
@@ -405,11 +434,11 @@ BEGIN
         cb.customer_id,
         cb.customer_health_score,
         'high',
-        CONCAT('High-value customer at risk: ', cb.customer_id, ' (Health: ', ROUND(cb.customer_health_score, 1), ', CLV: ', FORMAT(cb.clv_score, 0), ', Eval Date: ', v_eval_date, ')')
+        CONCAT('High-value in bottom 10%: ', cb.customer_id, ' (Health: ', ROUND(cb.customer_health_score, 1), ', Threshold: ', ROUND(v_high_value_threshold, 1), ', CLV: ', FORMAT(cb.clv_score, 0), ')')
     FROM customer_baselines cb
     JOIN monitoring_config mc ON mc.monitor_type = 'customer' AND mc.monitor_name = 'High Value Customer Alert' AND mc.is_active = TRUE
     WHERE cb.value_tier IN ('High Value', 'Premium') 
-    AND cb.customer_health_score < 75
+    AND cb.customer_health_score <= v_high_value_threshold
     AND cb.customer_id NOT IN (
         SELECT entity_id FROM monitoring_alerts 
         WHERE alert_type = 'high_value_at_risk' 
@@ -428,8 +457,10 @@ BEGIN
     WHERE log_id = v_log_id;
     
     -- Return summary
-    SELECT 'Customer Health Monitoring Complete' as status,
+    SELECT 'Customer Health Monitoring Complete (ADAPTIVE)' as status,
            v_eval_date as evaluation_date,
+           v_critical_threshold as critical_threshold_bottom_1pct,
+           v_high_value_threshold as high_value_threshold_bottom_10pct,
            v_total_checked as customers_analyzed,
            v_alerts_created as alerts_generated;
 END //
