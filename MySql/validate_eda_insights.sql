@@ -387,12 +387,6 @@ WHERE region = 'Central';
 -- Test monitoring procedures execution
 SET SQL_SAFE_UPDATES = 0;
 
--- Execute individual monitoring procedures to verify functionality
-CALL sp_monitor_daily_revenue();
-CALL sp_monitor_regional_performance();
-CALL sp_monitor_customer_health();
-CALL sp_monitor_category_performance();
-
 -- Execute master monitoring procedure
 CALL sp_run_all_monitoring();
 
