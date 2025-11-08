@@ -54,6 +54,7 @@ SELECT
     COUNT(DISTINCT year) as years_available,
     COUNT(DISTINCT month) as months_available,
     COUNT(DISTINCT quarter) as quarters_available,
+    COUNT(DISTINCT region) as regions_available,
     MIN(transaction_date) as earliest_date,
     MAX(transaction_date) as latest_date
 FROM sales_transactions;
@@ -92,6 +93,7 @@ SELECT
     month,
     quarter,
     day_of_week,
+    region,
     SUM(total_amount) as total_revenue,
     COUNT(DISTINCT transaction_id) as transaction_count,
     COUNT(DISTINCT customer_id) as unique_customers,
@@ -99,13 +101,15 @@ SELECT
     SUM(quantity) as total_units_sold,
     COUNT(DISTINCT product_category) as categories_active
 FROM sales_transactions 
-GROUP BY year, month, quarter, day_of_week
-ORDER BY year, month;
+GROUP BY year, month, quarter, day_of_week, region
+ORDER BY year, month, region;
 
 -- View 2: Seasonal Patterns Analysis
 CREATE OR REPLACE VIEW v_seasonal_patterns AS
 SELECT 
+	year,
     month,
+    region,
     CASE month 
         WHEN 1 THEN 'January' WHEN 2 THEN 'February' WHEN 3 THEN 'March'
         WHEN 4 THEN 'April' WHEN 5 THEN 'May' WHEN 6 THEN 'June'
@@ -119,12 +123,16 @@ SELECT
         (AVG(total_amount) / NULLIF((SELECT AVG(total_amount) FROM sales_transactions), 0)) * 100, 2
     ) as seasonality_index
 FROM sales_transactions 
-GROUP BY month
-ORDER BY month;
+GROUP BY year, month, region
+ORDER BY year, month, region;
 
 -- View 3: Weekday vs Weekend Performance
 CREATE OR REPLACE VIEW v_weekday_performance AS
 SELECT 
+	year,
+    month,
+    region,
+    day_of_week,
     CASE 
         WHEN day_of_week IN (1, 7) THEN 'Weekend'
         ELSE 'Weekday'
@@ -137,7 +145,8 @@ SELECT
         (COUNT(transaction_id) / NULLIF((SELECT COUNT(*) FROM sales_transactions), 0)) * 100, 2
     ) as transaction_share_pct
 FROM sales_transactions 
-GROUP BY day_type;
+GROUP BY year, month, region, day_of_week, day_type
+ORDER BY year, month, region, day_of_week;
 
 -- View 4: Year-over-Year Growth Trends
 CREATE OR REPLACE VIEW v_growth_trends AS
@@ -172,6 +181,8 @@ ORDER BY current_period.year, current_period.quarter;
 -- View 5: Geographic Performance Matrix
 CREATE OR REPLACE VIEW v_geographic_performance AS
 SELECT 
+	year,
+    month,
     region,
     SUM(total_amount) as total_revenue,
     COUNT(transaction_id) as transaction_count,
@@ -182,14 +193,15 @@ SELECT
         (SUM(total_amount) / NULLIF((SELECT SUM(total_amount) FROM sales_transactions), 0)) * 100, 2
     ) as market_share_pct
 FROM sales_transactions 
-GROUP BY region
-ORDER BY total_revenue DESC;
+GROUP BY year, month, region
+ORDER BY year, month, total_revenue DESC;
 
 -- View 6: Regional Cross-Correlation Analysis
 CREATE OR REPLACE VIEW v_regional_correlation AS
 SELECT 
     region_a.region as region_a,
     region_b.region as region_b,
+    region_a.year,
     COUNT(*) as data_points,
     AVG(region_a.monthly_revenue) as avg_revenue_a,
     AVG(region_b.monthly_revenue) as avg_revenue_b
@@ -202,8 +214,8 @@ JOIN
 ON region_a.year = region_b.year 
    AND region_a.month = region_b.month
    AND region_a.region < region_b.region
-GROUP BY region_a.region, region_b.region
-ORDER BY region_a.region, region_b.region;
+GROUP BY region_a.region, region_b.region, region_a.year
+ORDER BY region_a.year, region_a.region, region_b.region;
 
 -- View 7: Regional Volatility Tracking
 CREATE OR REPLACE VIEW v_regional_volatility AS
@@ -251,13 +263,13 @@ ORDER BY revenue_rank;
 -- Drop first if exists, then create (compatible with all MySQL versions)
 
 DROP INDEX idx_kpi_temporal_analysis ON sales_transactions;
-CREATE INDEX idx_kpi_temporal_analysis ON sales_transactions (year, month, quarter, day_of_week);
+CREATE INDEX idx_kpi_temporal_analysis ON sales_transactions (year, month, quarter, day_of_week, region);
 
 DROP INDEX idx_kpi_geographic_analysis ON sales_transactions;
 CREATE INDEX idx_kpi_geographic_analysis ON sales_transactions (region, product_category, customer_segment);
 
 DROP INDEX idx_kpi_revenue_analysis ON sales_transactions;
-CREATE INDEX idx_kpi_revenue_analysis ON sales_transactions (total_amount, transaction_date, region);
+CREATE INDEX idx_kpi_revenue_analysis ON sales_transactions (year, month, region, total_amount, transaction_date);
 
 DROP INDEX idx_kpi_customer_analysis ON sales_transactions;
 CREATE INDEX idx_kpi_customer_analysis ON sales_transactions (customer_id, customer_segment, total_amount);
@@ -299,6 +311,13 @@ SELECT * FROM v_geographic_performance LIMIT 5;
 SELECT 'Regional Rankings Sample Data:' as section;
 SELECT * FROM v_regional_rankings LIMIT 5;
 
+-- Verify dimensional granularity
+SELECT
+    'Dimensional Granularity Check' as section,
+    (SELECT COUNT(DISTINCT CONCAT(year, '-', month, '-', region)) FROM v_temporal_kpis) as temporal_kpi_rows,
+    (SELECT COUNT(DISTINCT CONCAT(year, '-', month, '-', region)) FROM v_seasonal_patterns) as seasonal_pattern_rows,
+    (SELECT COUNT(DISTINCT CONCAT(year, '-', month, '-', region)) FROM v_geographic_performance) as geographic_performance_rows;
+    
 -- Data quality verification
 SELECT 
     'Data Quality Check' as section,
@@ -348,6 +367,12 @@ FOUNDATION KPI VIEWS COMPLETE
    - Comprehensive data validation and quality checks
    - Dynamic metric calculations (no hardcoded values)
    - Full automation compatibility
+   
+✅ Power BI Integration Benefits:
+   - ALL views now support regional filtering from slicers
+   - Time-series analysis enabled across all views
+   - Multi-dimensional drill-down fully supported
+   - Consistent dimensional structure across all views
 
 READY FOR NEXT PHASE:
 - Advanced customer intelligence views

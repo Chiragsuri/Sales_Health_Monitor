@@ -660,13 +660,23 @@ SELECT
     mc.monitor_name,
     ma.alert_type,
     ma.entity_id,
+    CASE 
+        WHEN ma.entity_id IN ('East', 'West', 'North', 'South', 'Central') THEN ma.entity_id
+        WHEN ma.alert_message LIKE '%Region East%' THEN 'East'
+        WHEN ma.alert_message LIKE '%Region West%' THEN 'West'
+        WHEN ma.alert_message LIKE '%Region North%' THEN 'North'
+        WHEN ma.alert_message LIKE '%Region South%' THEN 'South'
+        WHEN ma.alert_message LIKE '%Region Central%' THEN 'Central'
+        ELSE NULL
+    END as region,
     ma.current_value,
     ma.baseline_value,
     ma.deviation_pct,
     ma.severity,
     ma.status,
     ma.alert_message,
-    TIMESTAMPDIFF(HOUR, ma.alert_timestamp, NOW()) as hours_since_alert
+    TIMESTAMPDIFF(HOUR, ma.alert_timestamp, NOW()) as hours_since_alert,
+    DATE(ma.alert_timestamp) as alert_date
 FROM monitoring_alerts ma
 LEFT JOIN monitoring_config mc ON ma.config_id = mc.config_id
 WHERE ma.status IN ('new', 'acknowledged')
@@ -735,6 +745,9 @@ AND (TABLE_NAME LIKE 'v_%alert%' OR TABLE_NAME LIKE 'v_%monitoring%');
 
 -- Run initial health check
 CALL sp_monitoring_health_check();
+
+-- This creates alerts by calling all monitoring procedures
+CALL sp_run_all_monitoring();
 
 -- Display monitoring summary
 SELECT * FROM v_monitoring_summary;
