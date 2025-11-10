@@ -746,9 +746,6 @@ AND (TABLE_NAME LIKE 'v_%alert%' OR TABLE_NAME LIKE 'v_%monitoring%');
 -- Run initial health check
 CALL sp_monitoring_health_check();
 
--- This creates alerts by calling all monitoring procedures
-CALL sp_run_all_monitoring();
-
 -- Display monitoring summary
 SELECT * FROM v_monitoring_summary;
 
