@@ -1,618 +1,1562 @@
 =============================================================
+
 SALES HEALTH MONITOR PROJECT - PHASE 6 COMPLETE PLAN
+
 Created: 2025-11-06 16:22 IST
-Last Updated: 2025-11-06 16:22 IST
+
+Last Updated: 2025-11-20 22:18 IST
+
+
 
 PROJECT STATUS OVERVIEW
 
+
+
 COMPLETED PHASES:
+
 ✅ Phase 1: Data Generation (customer, product, and transaction data)
+
 ✅ Phase 2: Data Cleaning \& Validation (100% quality score achieved)
+
 ✅ Phase 3: Foundation EDA (Temporal \& Geographic intelligence)
+
 ✅ Phase 4: Advanced EDA (Product, Customer, KPI intelligence)
+
 ✅ Phase 5: MySQL Integration - 100% COMPLETE (6 of 6 sections)
-✅ Section 1: Database Setup Infrastructure - COMPLETE
-✅ Section 2: Core Data Import - COMPLETE
-✅ Section 3: ML Baselines Integration - COMPLETE
-✅ Section 4: KPI Development - COMPLETE
-✅ Section 5: Data Validation Testing - COMPLETE
-✅ Section 6: Power BI Integration - COMPLETE
+
+&nbsp; ✅ Section 1: Database Setup Infrastructure - COMPLETE
+
+&nbsp; ✅ Section 2: Core Data Import - COMPLETE
+
+&nbsp; ✅ Section 3: ML Baselines Integration - COMPLETE
+
+&nbsp; ✅ Section 4: KPI Development - COMPLETE
+
+&nbsp; ✅ Section 5: Data Validation \& Testing - COMPLETE
+
+&nbsp; ✅ Section 6: Power BI Integration - COMPLETE
+
+
 
 CURRENT PHASE:
-🎯 Phase 6: Power BI Dashboard Development - IN PROGRESS (10% COMPLETE)
-✅ Section 1: Dashboard Planning \& Architecture - COMPLETE
-🔄 Section 2: Executive Overview Dashboard - IN PROGRESS (Week 1: 50%)
-⏳ Section 3: Alert Monitor Dashboard - PENDING
-⏳ Section 4: Customer Intelligence Dashboard - PENDING
-⏳ Section 5: Geographic \& Product Performance Dashboard - PENDING
-⏳ Section 6: Dashboard Integration \& Testing - PENDING
 
-NEXT PHASES:
-⏳ Phase 7: ML Anomaly Detection
-⏳ Phase 8: AI Text-Based Insights
+🎯 Phase 6: Power BI Dashboard Development - IN PROGRESS (75% COMPLETE)
 
-=============================================================
-PHASE 6: POWER BI DASHBOARD DEVELOPMENT
-===
+&nbsp; ✅ Section 1: Dashboard Planning \& Architecture - COMPLETE
 
-OVERVIEW
+&nbsp; ✅ Section 2: Dashboard 1 (Executive Overview) - COMPLETE
 
-This phase transforms raw data and SQL views into a comprehensive,
-interactive Power BI dashboard system that answers critical business
-questions and provides actionable insights for different stakeholders.
+&nbsp; ✅ Section 3: Dashboard 2 (Anomaly \& Risk Monitor) - COMPLETE
 
-PHASE OBJECTIVE
+&nbsp; ✅ Section 4: Dashboard 3 (Customer Intelligence) - COMPLETE
 
-Build 4 interconnected Power BI dashboards that:
+&nbsp; 🔄 Section 5: Dashboard 4 (Product Performance) - IN PROGRESS
 
-* Answer 10 core business questions (automation-ready, no hardcoded values)
-* Provide role-based views (Executive, Operations, Strategic Planning)
-* Enable real-time monitoring via DirectQuery from MySQL
-* Demonstrate advanced Power BI skills (calculations, filters, drill-throughs)
-* Create a portfolio-ready solution for resume/interviews
+&nbsp; ⏳ Section 6: Testing, Documentation \& Deployment - PENDING
+
+
 
 =============================================================
-SECTION 1: DASHBOARD PLANNING \& ARCHITECTURE
-===
 
-CURRENT STATUS: IN PROGRESS (Dashboard 3)
 
-BUSINESS QUESTIONS FRAMEWORK
-(Note: All questions are dynamic - will adapt to data changes)
 
-EXECUTIVE LEADERSHIP QUESTIONS:
+\# SALES HEALTH MONITOR - POWER BI DASHBOARDS
 
-1. What is our overall business health right now?
 
-   * How does current revenue performance compare to baseline?
-   * How many critical alerts require immediate attention?
-   * What is the average customer health score?
 
-2. Where are we losing money or customers?
+\## 📊 PROJECT OVERVIEW
 
-   * What are the active alerts indicating about business risks?
-   * Which high-value customers show at-risk behaviors?
-   * Which regions/categories show significant revenue deviations?
 
-3. Which areas are performing well vs. struggling?
 
-   * Which region has highest market share and revenue?
-   * Which product category dominates revenue mix?
-   * How do customer segments compare in behavior?
+\*\*Project Name:\*\* Sales Health Monitor Dashboard Suite
 
-4. Are we on track to hit our targets?
+\*\*Phase:\*\* Phase 6 - Power BI Dashboard Development
 
-   * What is projected annual revenue based on trends?
-   * How do seasonal patterns impact quarterly performance?
-   * What are year-over-year growth trends?
+\*\*Status:\*\* 75% Complete (3 of 4 dashboards)
 
-OPERATIONS MANAGER QUESTIONS: 5. What anomalies need immediate action?
+\*\*Timeline:\*\* 6-week implementation
 
-* What is current product anomaly detection rate?
-* How many behavioral anomalies identified?
-* What transaction volatility exists across regions?
+\*\*Current Week:\*\* Week 4 Complete, Week 5 In Progress
 
-6. How effective are our discount strategies?
 
-   * What is average discount rate across regions?
-   * How do discounts impact customer segments?
-   * Which categories show best margin performance?
 
-7. What's driving customer churn risk?
+\## 🎯 BUSINESS OBJECTIVES
 
-   * How many customers in each health score category?
-   * What percentage of base is classified as at-risk?
-   * What RFM patterns associate with customer decline?
 
-STRATEGIC PLANNING QUESTIONS: 8. Where should we invest resources next quarter?
 
-* Which categories show strongest growth momentum?
-* Which regions have untapped potential?
-* Which customer segments offer highest ROI?
+Build a comprehensive 4-dashboard Power BI solution that provides:
 
-9. What seasonal patterns should guide our planning?
+\- Executive-level KPI monitoring for C-suite decision-making
 
-   * Which months consistently perform above/below average?
-   * How do daily patterns vary by day of week?
-   * What seasonal patterns exist by category?
+\- Operational anomaly detection and risk management
 
-10. How balanced is our portfolio risk?
+\- Customer segmentation analysis and retention insights
 
-    * What is category revenue concentration?
-    * How diverse is regional revenue distribution?
-    * What customer value tier distribution exists?
+\- Product performance tracking and inventory optimization
 
-DASHBOARD ARCHITECTURE
 
-Dashboard 1: Executive Overview
-├── Purpose: 30-second business health snapshot
-├── Audience: C-Suite, Board members
-├── Section 1.1: KPI Cards (4 metrics)
-│ ├── Total Active Alerts
-│ ├── Projected Annual Revenue
-│ ├── Average Customer Health Score
-│ └── Critical Health Customers
-├── Section 1.2: Alert Severity Visualization
-│ └── Donut chart: Distribution by severity level
-├── Section 1.3: Revenue Performance
-│ ├── Line chart: Revenue trend (12 months)
-│ └── Bar chart: Revenue by region
-└── Section 1.4: Performance Gauge
-└── Gauge: Performance index vs baseline
 
-Dashboard 2: Alert \& Anomaly Monitor
-├── Purpose: Real-time operations command center
-├── Audience: Operations team, incident managers
-├── Section 2.1: Alert Management
-│ ├── Table: Alert details with aging info
-│ └── Heatmap: Regional alert distribution
-├── Section 2.2: Trend Analysis
-│ ├── Stacked bar: Alerts over time by type
-│ └── Column chart: Anomaly rate trends
-├── Section 2.3: Risk Analysis
-│ ├── Treemap: Anomalies by segment
-│ └── Scatter plot: Customer risk matrix
-└── Section 2.4: Filters
-└── Alert type, severity, region, date range
+\*\*Target Users:\*\*
 
-Dashboard 3: Customer Intelligence
-├── Purpose: Retention strategy and value optimization
-├── Audience: Customer success, sales leadership
-├── Section 3.1: Customer Overview
-│ ├── KPI: Total customers
-│ ├── KPI: High-value customer count
-│ └── KPI: High-value revenue percentage
-├── Section 3.2: Segmentation
-│ ├── Funnel: Value tier distribution
-│ ├── Waterfall: Health score distribution
-│ └── Matrix: Segment x Value tier
-├── Section 3.3: Advanced Analysis
-│ ├── Scatter: RFM analysis
-│ ├── Table: At-risk high-value customers
-│ └── Line: Acquisition vs churn trend
-└── Section 3.4: Drill-through
-└── Customer profile details
+\- C-Suite Executives (CEO, CFO, VP Sales)
 
-Dashboard 4: Geographic \& Product Performance
-├── Purpose: Growth optimization and portfolio analysis
-├── Audience: Product managers, strategic planners
-├── Section 4.1: Geographic Analysis
-│ ├── Map: Revenue by region (bubble size)
-│ ├── Column: Top regions by revenue
-│ └── Line: Regional trends (12 months)
-├── Section 4.2: Product Analysis
-│ ├── Stacked column: Revenue by category (monthly)
-│ ├── Matrix: Category x Region performance
-│ └── Donut: Revenue mix by category
-├── Section 4.3: Temporal Patterns
-│ └── Area: Daily transaction patterns (Mon-Sun)
-└── Section 4.4: Multi-level Filtering
-└── Region, category, date range
+\- Risk Managers \& Operations Teams
 
-DATA SOURCES \& RELATIONSHIPS
+\- Customer Success \& Marketing Teams
 
-Dashboard 1 - Executive Overview:
-├── Primary: v\_monitoring\_summary, v\_temporal\_kpis, v\_geographic\_performance
-└── Secondary: customers, sales\_transactions
+\- Product Managers \& Merchandising
 
-Dashboard 2 - Alert Monitor:
-├── Primary: v\_active\_alerts, v\_alert\_trends, customer\_anomalies
-└── Secondary: v\_monitoring\_summary, customers
 
-Dashboard 3 - Customer Intelligence:
-├── Primary: customers, customer\_baselines, customer\_anomalies
-└── Secondary: sales\_transactions, v\_temporal\_kpis
 
-Dashboard 4 - Geographic \& Product Performance:
-├── Primary: v\_geographic\_performance, v\_seasonal\_patterns, v\_weekday\_performance
-└── Secondary: sales\_transactions, products
+---
 
-NAVIGATION \& USER EXPERIENCE
 
-Navigation Flow:
-Home (Executive Overview - Page 1)
-├── \[View Alerts] → Dashboard 2: Alert Monitor
-├── \[View Customers] → Dashboard 3: Customer Intelligence
-└── \[View Performance] → Dashboard 4: Geographic \& Product
 
-Navigation Features:
+\## 📈 CURRENT PROGRESS STATUS
 
-* \[← Back to Overview] on each dashboard
-* Global filters (Date, Region, Segment)
-* Drill-through capabilities (alert → customer, region → details)
-* Bookmarks for common views (e.g., "Urgent Interventions")
 
-Background Philosophy:
 
-* Modern, tech-company aesthetic (aligns with Power BI, VS Code, modern BI tools)
-* Eye-friendly for extended viewing sessions
-* Stands out in presentations and interviews
-* Professional sleek appearance
-* High contrast for readability and data focus
-* Demonstrates awareness of modern UI/UX trends
+\### Overall Project: 75% Complete
 
-DARK THEME COLOR SPECIFICATION:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-BACKGROUNDS:
-Page Background: #0D0D1A (Very dark - outer area)
-Canvas Background: #1E1E2F (Dark navy - main dashboard area)
-Visual Background: #1E1E2F (Matches canvas for cohesion)
-Filter Pane: #1E1E2F (Dark - no white panels!)
-Border Colors: #3A3A4F (Subtle gray for separation)
-Card Backgrounds: #1E1E2F (Dark with subtle borders)
 
-TEXT COLORS:
-Primary Text: #FFFFFF (White - high contrast, readable)
-Secondary Text: #B0B0C0 (Light gray - for labels, subtitles)
-Tertiary Text: #8A8A9F (Dimmed for less important info)
+\*\*Completed Dashboards (3 of 4):\*\*
 
-DATA VISUALIZATION COLORS (Your Approved Palette):
-🔵 Primary Blue: #0078D4 (Revenue, KPIs, Main Metrics)
-🔴 Critical Red: #D13438 (Alerts, Risks, Critical Items)
-🟠 High Orange: #FFA500 (High Priority, Warnings)
-🟡 Medium Yellow: #FFD700 (Medium Priority, Watch Items)
-🟢 Success Green: #107C10 (Healthy Status, Success, On-Track)
-⚫ Neutral Gray: #6E6E6E (Secondary Data, Neutral Status)
-🔵 Light Blue: #00BCF2 (Accent, Supporting Metrics)
-🟣 Purple: #8764B8 (Accent, Categorical Data)
+✅ Dashboard 1: Executive Overview (Sales Health Monitor)
 
-MODERN DESIGN FEATURES:
-Rounded Corners: 5-7px (smooth, modern feel)
-Card KPI Numbers: 36px font (large, readable)
-Line Chart Width: 3px (prominent, clear trends)
-Grid Lines: Visible, subtle gray (#3A3A4F)
-Shadows: Optional subtle depth
-Spacing: 15px padding around visuals
-Font: Segoe UI (clean, professional)
+✅ Dashboard 2: Anomaly \& Risk Monitor
 
-TECHNOLOGY STACK
+✅ Dashboard 3: Customer Intelligence
 
-Backend:
 
-* MySQL 8.0 Community Edition (DirectQuery mode)
-* 22 tables/views with 827,788+ records
-* Connection: 127.0.0.1:3306 (DirectQuery)
-* User: sales\_admin (with full privileges)
 
-Frontend:
+\*\*In Progress:\*\*
 
-* Power BI Desktop (Current version)
-* 4 report pages
-* 30+ visualizations
-* DirectQuery (live data, no caching)
+🔄 Dashboard 4: Product Performance Analytics
+
+
+
+\*\*Completion Metrics:\*\*
+
+\- Total Visuals Built: 26 across 3 dashboards
+
+\- Total DAX Measures: 10+
+
+\- Estimated Project Hours: 40+
+
+
+
+---
+
+
+
+\## 🗂️ DASHBOARD ARCHITECTURE
+
+
+
+\### Dashboard 1: EXECUTIVE OVERVIEW (Sales Health Monitor)
+
+\*\*Status:\*\* ✅ COMPLETE
+
+\*\*Purpose:\*\* High-level business health monitoring
+
+\*\*Target Audience:\*\* CEO, CFO, VP Sales
+
+
+
+\*\*Components (10 visuals):\*\*
+
+1\. Total Revenue Card with Sparkline (Purple theme)
+
+2\. Total Customers Card with Sparkline
+
+3\. Total Transactions Card with Sparkline
+
+4\. Average Transaction Value Card with Sparkline
+
+5\. Monthly Revenue Trend Chart (Area chart)
+
+6\. Alert Severity Distribution (Donut chart)
+
+7\. Active Alerts Card (Pink/Red)
+
+8\. Critical Anomalies Card (Red)
+
+9\. Premium Customers At Risk Card (Orange)
+
+10\. Customer Health Score Card (Green)
+
+
+
+\*\*Key Metrics:\*\*
+
+\- Total Revenue (from sales\_transactions)
+
+\- Total Customers (distinct count)
+
+\- Total Transactions (row count)
+
+\- Average Transaction Value (calculated)
+
+\- Active Alerts (from customer\_anomalies)
+
+\- Critical Anomalies (severity-filtered count)
+
+
+
+\*\*Slicers:\*\*
+
+\- Region (dropdown: All regions)
+
+\- Year (buttons: available years in data)
+
+
+
+\*\*Design Features:\*\*
+
+\- Sparklines show time-series trends in KPI cards
+
+\- PY (Prior Year) comparison labels
+
+\- Purple theme (#9D4EDD) throughout
+
+\- Responsive filtering across all visuals
+
+
+
+---
+
+
+
+\### Dashboard 2: ANOMALY \& RISK MONITOR
+
+\*\*Status:\*\* ✅ COMPLETE
+
+\*\*Purpose:\*\* Operational monitoring of customer anomalies
+
+\*\*Target Audience:\*\* Risk Managers, Customer Success, Operations
+
+
+
+\*\*Components (6 visuals):\*\*
+
+1\. Customer Anomaly Monitor (Table with 7 columns)
+
+&nbsp;  - Columns: ID, Customer ID, Severity, Segment, Value Tier, Flags, Types, Last Updated
+
+&nbsp;  - Conditional formatting: Severity color-coding (Critical=Red, High=Orange, Medium=Yellow)
+
+2\. Anomalies by Customer Segment (Treemap)
+
+3\. Anomaly Type Breakdown (Bar chart)
+
+4\. Customer Risk Distribution by Anomaly Flags (Column chart)
+
+5\. Alerts by Customer Value Tier (Donut chart)
+
+
+
+\*\*Slicers:\*\*
+
+\- Value Tier (dropdown)
+
+\- Severity (dropdown: All, Critical, High, Medium)
+
+\- Customer Segment (buttons: Budget, Premium, Standard)
+
+
+
+\*\*Key Features:\*\*
+
+\- Severity-based color coding throughout all visuals
+
+\- Interactive drill-down capabilities
+
+\- Real-time anomaly flag tracking from ML model outputs
+
+\- Cyan customer ID links for visual consistency
+
+\- Scrollable table for handling large datasets
+
+
+
+---
+
+
+
+\### Dashboard 3: CUSTOMER INTELLIGENCE
+
+\*\*Status:\*\* ✅ COMPLETE (November 20, 2025)
+
+\*\*Purpose:\*\* Customer segmentation analysis and retention insights
+
+\*\*Target Audience:\*\* Marketing Teams, Customer Success, Strategic Planning
+
+
+
+\*\*Components (10 visuals):\*\*
+
+1\. High-Value Customers Card (Cyan #00D4FF)
+
+&nbsp;  - Counts customers in "High Value" tier
+
+2\. High-Value Revenue % Card (Purple #9D4EDD)
+
+&nbsp;  - Percentage of total revenue from high-value customers
+
+3\. Avg Customer Lifetime Value Card (Gold #FFD700)
+
+&nbsp;  - Average CLV across selected customer segments
+
+4\. At-Risk High-Value Customers Card (Orange #FF6B35)
+
+&nbsp;  - Count of high-value customers in "At-Risk" activity segment
+
+5\. Customer Distribution by Value Tier (Funnel chart)
+
+&nbsp;  - Shows customer count across all value tiers
+
+6\. Customer Activity Segments (Bar chart)
+
+&nbsp;  - Breakdown by activity: Champions, Loyal, At-Risk High Value, At-Risk Low Value
+
+7\. Customer Segment Distribution (Matrix table with heat map)
+
+&nbsp;  - Rows: Customer Segment (Budget, Premium, Standard)
+
+&nbsp;  - Columns: Value Tier
+
+&nbsp;  - Conditional formatting: Dark to Purple gradient
+
+8\. At-Risk High-Value Customers - Priority Action List (Table)
+
+&nbsp;  - 7 columns: Customer ID, Segment, Tier, CLV Score, Activity, Freq Score, Days Since Last Purchase
+
+&nbsp;  - Sorted by CLV Score descending (highest priority first)
+
+&nbsp;  - Conditional formatting on 3 key columns:
+
+&nbsp;    \* Customer ID: Cyan text for consistency
+
+&nbsp;    \* CLV Score: Dark to Gold gradient background
+
+&nbsp;    \* Days Since Last Purchase: Dark to Red gradient (urgency indicator)
+
+
+
+\*\*Slicers:\*\*
+
+\- Value Tier (dropdown: All, High Value, Medium-High, Medium, Low Value)
+
+\- Activity Segment (dropdown: All, Champions, Loyal Customers, At-Risk HV, At-Risk LV)
+
+\- Customer Segment (buttons: Budget, Premium, Standard)
+
+
+
+\*\*Technical Implementation:\*\*
+
+\- Cards 1, 2, 4: Fixed KPI benchmarks (always show High Value metrics)
+
+\- Card 3: Interactive metric (responds to all slicers for comparative analysis)
+
+\- All slicers use customer\_baselines table fields for accurate filtering
+
+\- Action table uses "Don't summarize" to show individual customer records
+
+\- Scrollbar enabled on action table for scalability
+
+
+
+\*\*Color Palette:\*\*
+
+\- Primary Border: Purple (#9D4EDD)
+
+\- High-Value Customers Card: Cyan (#00D4FF)
+
+\- High-Value Revenue Card: Purple (#9D4EDD)
+
+\- Avg CLV Card: Gold (#FFD700)
+
+\- At-Risk Card: Orange (#FF6B35)
+
+\- Champions: Green (#00FF7F)
+
+\- Loyal Customers: Cyan (#00D4FF)
+
+\- At-Risk High Value: Orange (#FFA500)
+
+\- At-Risk Low Value: Red (#FF6B6B)
+
+
+
+\*\*Business Value:\*\*
+
+\- Identifies high-value customers for targeted retention
+
+\- Highlights at-risk customers requiring immediate action
+
+\- Enables data-driven customer segmentation strategies
+
+\- Provides actionable priority list for customer success teams
+
+
+
+---
+
+
+
+\### Dashboard 4: PRODUCT PERFORMANCE ANALYTICS
+
+\*\*Status:\*\* ⏳ PENDING (Week 5)
+
+\*\*Purpose:\*\* Product category analysis and inventory insights
+
+\*\*Target Audience:\*\* Product Managers, Inventory Teams, Merchandising
+
+
+
+\*\*Planned Components:\*\*
+
+\- Revenue by Product Category
+
+\- Top Products by Revenue (table or bar chart)
+
+\- Product Performance Matrix
+
+\- Category Growth Trends (line or area chart)
+
+\- Inventory Risk Indicators
+
+\- Category and time period slicers
+
+
+
+---
+
+
+
+\## 🔗 DATA MODEL STRUCTURE
+
+
+
+\*\*Tables (8):\*\*
+
+1\. sales\_transactions (Fact table)
+
+2\. customers (Dimension)
+
+3\. products (Dimension)
+
+4\. regions (Dimension)
+
+5\. calendar\_dates (Dimension)
+
+6\. customer\_baselines (ML Output - customer segmentation data)
+
+7\. customer\_anomalies (ML Output - anomaly detection results)
+
+8\. product\_baselines (ML Output - product performance baselines)
+
+
+
+\*\*Key Relationships:\*\*
+
+\- sales\_transactions\[customer\_id] → customers\[customer\_id] (Many-to-One, Active)
+
+\- sales\_transactions\[customer\_id] → customer\_baselines\[customer\_id] (Many-to-One, Inactive)
+
+\- customers\[customer\_id] → customer\_baselines\[customer\_id] (One-to-One, Active)
+
+\- customers\[customer\_id] → customer\_anomalies\[customer\_id] (One-to-Many, Active)
+
+\- sales\_transactions\[product\_id] → products\[product\_id] (Many-to-One, Active)
+
+\- sales\_transactions\[region\_id] → regions\[region\_id] (Many-to-One, Active)
+
+\- sales\_transactions\[transaction\_date] → calendar\_dates\[date] (Many-to-One, Active)
+
+
+
+\*\*Relationship Design Notes:\*\*
+
+\- Inactive relationship between sales\_transactions and customer\_baselines used with USERELATIONSHIP() in DAX
+
+\- Star schema design for optimal query performance
+
+\- Calendar table supports time intelligence functions
+
+
+
+---
+
+
+
+\## 💡 KEY DAX MEASURES
+
+
+
+\### Dashboard 1 Measures:
+
+```
+
+Total Revenue = SUM(sales\_transactions\[total\_amount])
+
+Total Customers = DISTINCTCOUNT(sales\_transactions\[customer\_id])
+
+Total Transactions = COUNTROWS(sales\_transactions)
+
+Avg Transaction = DIVIDE(\[Total Revenue], \[Total Transactions], 0)
+
+PY Revenue = CALCULATE(\[Total Revenue], SAMEPERIODLASTYEAR(calendar\_dates\[date]))
+
+Active Alerts = COUNTROWS(customer\_anomalies)
+
+Critical Anomalies = CALCULATE(COUNTROWS(customer\_anomalies), customer\_anomalies\[severity] = "Critical")
+
+```
+
+
+
+\### Dashboard 3 Measures:
+
+```
+
+High\_Value\_Customers = 
+
+VAR Result = 
+
+&nbsp;   CALCULATE(
+
+&nbsp;       COUNTROWS(customer\_baselines),
+
+&nbsp;       customer\_baselines\[value\_tier] = "High Value"
+
+&nbsp;   )
+
+RETURN
+
+&nbsp;   IF(ISBLANK(Result) || Result = 0, 0, Result)
+
+
+
+HV\_Revenue\_Pct = 
+
+VAR HVRevenue = 
+
+&nbsp;   CALCULATE(
+
+&nbsp;       SUM(sales\_transactions\[total\_amount]),
+
+&nbsp;       customer\_baselines\[value\_tier] = "High Value",
+
+&nbsp;       USERELATIONSHIP(sales\_transactions\[customer\_id], customer\_baselines\[customer\_id])
+
+&nbsp;   )
+
+VAR TotalRevenue = SUM(sales\_transactions\[total\_amount])
+
+VAR Result = DIVIDE(HVRevenue, TotalRevenue, 0)
+
+RETURN
+
+&nbsp;   IF(Result = 0 || ISBLANK(Result), 0, Result)
+
+
+
+Avg\_CLV = AVERAGE(customer\_baselines\[clv\_score])
+
+
+
+AtRisk\_HV\_Customers = 
+
+VAR Result = 
+
+&nbsp;   CALCULATE(
+
+&nbsp;       COUNTROWS(customer\_baselines),
+
+&nbsp;       customer\_baselines\[value\_tier] = "High Value",
+
+&nbsp;       customer\_baselines\[activity\_segment] = "At-Risk High Value"
+
+&nbsp;   )
+
+RETURN
+
+&nbsp;   IF(ISBLANK(Result) || Result = 0, 0, Result)
+
+```
+
+
+
+\*\*DAX Best Practices Applied:\*\*
+
+\- Use of ISBLANK() for error handling
+
+\- DIVIDE() function with third parameter to prevent division by zero errors
+
+\- Variables (VAR) for code clarity and performance
+
+\- USERELATIONSHIP() to activate inactive relationships within calculation context
+
+\- IF statements to handle blank/zero scenarios gracefully
+
+
+
+---
+
+
+
+\## 🎨 DESIGN SYSTEM \& COLOR PALETTE
+
+
+
+\*\*Primary Brand Color:\*\*
+
+\- Purple: #9D4EDD (Borders, primary theme, revenue metrics)
+
+\- Dark Background: #1E1E2F (Canvas and card backgrounds)
+
+\- Lighter Background: #2D2D3F (Secondary elements, alternating table rows)
+
+
+
+\*\*Semantic Color System:\*\*
+
+\- Gold (#FFD700): High value, money, premium tier, CLV metrics
+
+\- Cyan (#00D4FF): Active customers, engagement, customer counts
+
+\- Green (#00FF7F): Positive indicators, champions, health scores
+
+\- Orange (#FFA500): Warning, at-risk high value, medium-high tier
+
+\- Red (#FF6B6B): Critical alerts, danger, at-risk low value
+
+\- Pink (#FF6B9D): Premium segment, active alerts
+
+\- Gray (#808080): Low value, inactive, neutral states
+
+
+
+\*\*Typography Standards:\*\*
+
+\- Font Family: Segoe UI (Power BI default)
+
+\- Title: 16pt Bold White
+
+\- KPI Values: 36pt Bold (card callout values)
+
+\- Labels: 16pt Bold White
+
+\- Body Text: 11-12pt White
+
+\- Data Labels: 12pt (Black on light backgrounds, White on dark backgrounds)
+
+
+
+\*\*Visual Formatting Standards:\*\*
+
+\- Card Borders: 2px solid #9D4EDD, 4px border radius
+
+\- Visual Spacing: 10px padding between all visuals
+
+\- Conditional Formatting: Gradient style (dark → accent color)
+
+\- Slicer Style Guidelines:
+
+&nbsp; \* Dropdown: Use for fields with 4+ options
+
+&nbsp; \* Buttons: Use for fields with 2-3 options only
+
+\- Alternating Row Colors: Enabled for better table readability
+
+
+
+\*\*Consistency Principles:\*\*
+
+\- All dashboards use the same purple theme border
+
+\- Semantic colors maintain meaning across all dashboards
+
+\- Visual spacing and padding uniform throughout
+
+\- Typography hierarchy consistent across all pages
+
+
+
+---
+
+
+
+\## 🛠️ TECHNICAL IMPLEMENTATION
+
+
+
+\### Week-by-Week Progress:
+
+
+
+\*\*Week 1: Foundation \& Setup\*\* ✅ COMPLETE
+
+\- Data import from MySQL database
+
+\- Data type validation and formatting
+
+\- Relationship configuration (star schema)
+
+\- Theme setup and base configuration
+
+\- Template creation for reusable formatting
+
+
+
+\*\*Week 2: Dashboard 1 (Executive Overview)\*\* ✅ COMPLETE
+
+\- 10 components built
+
+\- 4 sparkline KPI cards with time-series trends
+
+\- Monthly revenue trend area chart
+
+\- Alert severity donut chart
+
+\- 4 alert KPI cards with color coding
+
+\- Region and Year slicers configured
+
+\- Cross-filtering tested and validated
+
+
+
+\*\*Week 3: Dashboard 2 (Anomaly \& Risk Monitor)\*\* ✅ COMPLETE
+
+\- 6 components built
+
+\- Customer anomaly monitor table with 7 columns
+
+\- Conditional formatting applied (severity-based)
+
+\- Treemap for segment distribution
+
+\- Bar chart for anomaly type breakdown
+
+\- Column chart for risk distribution by flags
+
+\- Donut chart for alerts by value tier
+
+\- Value Tier, Severity, Customer Segment slicers
+
+\- Scrolling enabled on table visual
+
+
+
+\*\*Week 4: Dashboard 3 (Customer Intelligence)\*\* ✅ COMPLETE (Nov 20, 2025)
+
+\- 10 components built and tested
+
+\- 4 KPI cards with strategic design (fixed benchmarks + interactive CLV)
+
+\- Value tier funnel chart with 4-tier distribution
+
+\- Activity segment bar chart with color-coded segments
+
+\- Customer segment matrix table with heat map formatting
+
+\- At-risk customer action table with priority sorting
+
+\- Minimal conditional formatting applied (3 key columns)
+
+\- Slicer field source validation and correction
+
+\- Customer count calculations verified across all segments
+
+\- Visual alignment optimized with 10px spacing
+
+\- Cross-dashboard color consistency verified
+
+
+
+\*\*Week 5: Dashboard 4 (Product Performance)\*\* 🔄 IN PROGRESS
+
+\- Product category revenue analysis
+
+\- Top performers identification table
+
+\- Growth trends and seasonal pattern charts
+
+\- Inventory risk metrics and indicators
+
+\- Category and time period slicers
+
+
+
+\*\*Week 6: Testing \& Deployment\*\* ⏳ PENDING
+
+\- Comprehensive cross-dashboard testing
+
+\- DAX measure documentation
+
+\- User guide creation with screenshots
+
+\- Stakeholder presentation preparation
+
+\- Publish to Power BI Service
+
+\- Portfolio screenshots and project wrap-up
+
+
+
+---
+
+
+
+\## ✅ TESTING \& QUALITY ASSURANCE
+
+
+
+\### Dashboard 1 Testing ✅ COMPLETE
+
+\- All KPI cards display correct calculated values
+
+\- Sparklines render accurately with time-series data
+
+\- Prior Year (PY) comparisons calculate correctly
+
+\- Region slicer filters all visuals properly
+
+\- Year button slicers filter dynamically
+
+\- Revenue trend chart updates based on selections
+
+\- Alert cards pull from customer\_anomalies table correctly
+
+\- Color scheme consistent with design system
+
+\- No performance issues or lag detected
+
+
+
+\### Dashboard 2 Testing ✅ COMPLETE
+
+\- Customer Anomaly table loads with all 7 columns
+
+\- Conditional formatting displays properly based on severity
+
+\- Treemap, bar chart, column chart, donut chart render correctly
+
+\- All charts show accurate data from customer\_anomalies table
+
+\- Value Tier, Severity, Customer Segment slicers cross-filter correctly
+
+\- Table scrolling works for datasets exceeding visual height
+
+\- Customer IDs display consistently as cyan links
+
+\- No DAX errors or blank values
+
+
+
+\### Dashboard 3 Testing ✅ COMPLETE (Nov 20, 2025)
+
+\- All 4 KPI cards display correct calculated values
+
+\- High-Value Customers card shows fixed count (unaffected by Value Tier slicer)
+
+\- HV Revenue % card calculates correctly using USERELATIONSHIP
+
+\- Avg CLV card responds dynamically to all slicer selections
+
+\- At-Risk HV Customers card shows fixed count with dual filters
+
+\- Customer segment filtering validated across all segments
+
+\- Funnel chart displays all value tiers with accurate counts
+
+\- Bar chart shows all 4 activity segments sorted by count
+
+\- Matrix table displays all segment × tier combinations
+
+\- Matrix heat map conditional formatting renders correctly
+
+\- Action table displays individual customer records (not aggregated)
+
+\- Action table conditional formatting applied to 3 key columns
+
+\- Action table sorted by CLV Score descending
+
+\- All slicers verified to use customer\_baselines table fields
+
+\- Visual alignment and 10px spacing confirmed
+
+\- Color consistency verified across Dashboards 1, 2, and 3
+
+\- No blank values when filters applied
+
+\- No performance degradation with multiple filters active
+
+
+
+\### Dashboard 4 Testing ⏳ PENDING
+
+(To be completed after Dashboard 4 build)
+
+
+
+\### Cross-Dashboard Testing ✅ COMPLETE (Dashboards 1-3)
+
+\- Color palette consistent across all dashboards (purple theme #9D4EDD)
+
+\- Navigation between dashboard pages works smoothly
+
+\- Slicer behavior consistent (dropdowns and buttons)
+
+\- Visual formatting standards maintained across all pages
+
+\- Data model relationships support all dashboard queries
+
+\- Performance acceptable with no lag or timeout issues
+
+\- Semantic color meanings consistent (green=positive, red=critical, etc.)
+
+
+
+---
+
+
+
+\## 📚 LESSONS LEARNED \& BEST PRACTICES
+
+
+
+\### Dashboard 3 Specific Learnings:
+
+
+
+\*\*1. Slicer Field Source Validation is Critical\*\*
+
+\- Issue Encountered: Slicers pulling from different tables (customers vs customer\_baselines) caused filtering discrepancies and inaccurate customer counts
+
+\- Root Cause: Multiple tables with similar field names (segment, value\_tier) led to incorrect field selection
+
+\- Solution: Verified and corrected all slicer fields to use customer\_baselines table exclusively
+
+\- Lesson: Always verify table source for slicer fields, especially when multiple tables have similar columns
+
+
+
+\*\*2. Fixed vs Dynamic Metrics Design Pattern\*\*
+
+\- Design Decision: Cards 1, 2, 4 show fixed high-value benchmarks; Card 3 is interactive
+
+\- Rationale: Strategic KPIs (benchmarks) vs Analytical Metrics (comparative analysis)
+
+\- Result: Improved usability - users can compare segments while maintaining reference benchmarks
+
+\- Lesson: Not all metrics should respond to all slicers - intentional design enhances dashboard purpose
+
+
+
+\*\*3. Minimal Conditional Formatting Approach\*\*
+
+\- Original Plan: 6-7 formatted columns with extensive color coding
+
+\- Revised Approach: Limited to 3 key columns (Customer ID, CLV, Recency Days)
+
+\- Result: Reduced visual noise while maintaining actionable highlighting
+
+\- Lesson: Focus conditional formatting on decision-making columns only; less is more
+
+
+
+\*\*4. Layout Flexibility Over Rigid Grids\*\*
+
+\- Challenge: Table and matrix have different widths; forcing same-row layout looked awkward
+
+\- Solution: Adapted to natural, balanced layout instead of perfect grid alignment
+
+\- Result: Professional appearance without sacrificing visual balance
+
+\- Lesson: Prioritize visual balance over uniformity; user experience trumps mathematical perfection
+
+
+
+\*\*5. Understanding Data Distribution Patterns\*\*
+
+\- Discovery: Segment averages can exceed overall average (Simpson's Paradox)
+
+\- Example: Budget segment average CLV can be higher than overall average CLV
+
+\- Explanation: Valid due to distribution differences and segment composition
+
+\- Lesson: Always understand your data distribution; unexpected results may be statistically correct
+
+
+
+\### General Power BI Best Practices:
+
+
+
+\*\*1. Establish Design System Early\*\*
+
+\- Create theme, color palette, and formatting standards in first dashboard
+
+\- Apply consistently to all subsequent dashboards
+
+\- Result: Faster development and cohesive visual identity
+
+
+
+\*\*2. Use Semantic Color Coding\*\*
+
+\- Assign meaning to colors: Green=positive, Red=critical, Orange=warning
+
+\- Maintain meaning across all dashboards
+
+\- Result: Users learn visual language and interpret dashboards faster
+
+
+
+\*\*3. DAX Naming Conventions\*\*
+
+\- Use descriptive prefixes: HV\_ for high-value, Avg\_ for averages, PY\_ for prior year
+
+\- Makes DAX code self-documenting and easier to debug
+
+\- Improves collaboration when working with other developers
+
+
+
+\*\*4. Test with Real User Scenarios\*\*
+
+\- Don't just test functionality - test business questions
+
+\- Example: "Can I identify which customers to call this week?" vs "Does the filter work?"
+
+\- Result: Dashboards that solve real problems, not just display data
+
+
+
+\*\*5. Comprehensive Error Handling in DAX\*\*
+
+\- Always include ISBLANK() checks for null handling
+
+\- Use DIVIDE() with third parameter to prevent #ERROR displays
+
+\- Add IF statements to handle edge cases (zero, blank, no data)
+
+\- Result: Robust dashboards that handle unexpected data gracefully
+
+
+
+\*\*6. Performance Optimization Techniques\*\*
+
+\- Prefer measures over calculated columns (better compression and flexibility)
+
+\- Use DAX variables for clarity and to avoid redundant calculations
+
+\- Be cautious with DISTINCTCOUNT on large datasets (can be slow)
+
+\- Minimize use of calculated tables when measures can achieve same result
+
+
+
+\*\*7. Slicer UX Design Guidelines\*\*
+
+\- Dropdowns: Use for fields with 4+ options (cleaner interface)
+
+\- Buttons: Use for fields with 2-3 options (faster selection)
+
+\- Never use buttons for 10+ values (clutters dashboard and reduces usability)
+
+\- Result: Intuitive filtering that matches user expectations
+
+
+
+\*\*8. Relationship Management Strategy\*\*
+
+\- Use inactive relationships with USERELATIONSHIP() for complex scenarios
+
+\- Avoids ambiguous paths in data model
+
+\- Provides flexibility for different calculation contexts
+
+\- Document inactive relationships clearly for future maintenance
+
+
+
+---
+
+
+
+\## 🎯 NEXT STEPS \& ROADMAP
+
+
+
+\### Immediate Actions (Week 5):
+
+1\. ⏳ Complete Dashboard 4: Product Performance Analytics
+
+&nbsp;  - Build product category revenue breakdown
+
+&nbsp;  - Create top products table/chart
+
+&nbsp;  - Develop product performance matrix
+
+&nbsp;  - Add category growth trend visualization
+
+&nbsp;  - Implement inventory risk indicators
+
+&nbsp;  - Configure category and time period slicers
+
+
+
+2\. ⏳ Create Product-Specific DAX Measures
+
+&nbsp;  - Revenue by category
+
+&nbsp;  - Top N products measure
+
+&nbsp;  - Product performance score
+
+&nbsp;  - Inventory turnover metrics
+
+&nbsp;  - Growth rate calculations
+
+
+
+\### Week 6: Final Testing \& Deployment
+
+1\. ⏳ Comprehensive Cross-Dashboard Testing
+
+&nbsp;  - Test all slicer interactions across 4 dashboards
+
+&nbsp;  - Verify data accuracy against source MySQL database
+
+&nbsp;  - Performance testing with various filter combinations
+
+&nbsp;  - Cross-filtering behavior validation
+
+
+
+2\. ⏳ Documentation \& Knowledge Transfer
+
+&nbsp;  - Document all DAX measures with comments and explanations
+
+&nbsp;  - Create user guide with screenshots for each dashboard
+
+&nbsp;  - Prepare stakeholder presentation deck
+
+&nbsp;  - Write technical specifications document
+
+
+
+3\. ⏳ Deployment Preparation
+
+&nbsp;  - Publish to Power BI Service (workspace setup)
+
+&nbsp;  - Configure data refresh schedule
+
+&nbsp;  - Set up sharing permissions and security
+
+&nbsp;  - Create shareable links for stakeholders
+
+
+
+4\. ⏳ Portfolio Finalization
+
+&nbsp;  - Take professional screenshots of all dashboards
+
+&nbsp;  - Record demo video walkthrough
+
+&nbsp;  - Write project completion summary
+
+&nbsp;  - Update resume and LinkedIn with project highlights
+
+
+
+\### Future Enhancements (Post-Phase 6):
+
+\- Drill-through pages for detailed customer analysis
+
+\- Bookmarks for saved dashboard views (pre-configured filters)
+
+\- What-if parameters for scenario analysis and forecasting
+
+\- Predictive analytics integration for churn forecasting
+
+\- Real-time data refresh (if moving to production environment)
+
+\- Row-Level Security (RLS) implementation for multi-user deployment
+
+\- Mobile-optimized layouts for tablet and phone access
+
+\- Automated email subscriptions for key stakeholders
+
+\- Power Automate integration for alert triggers
+
+\- Custom tooltips with additional context
+
+
+
+---
+
+
+
+\## 💼 PORTFOLIO \& RESUME VALUE
+
+
+
+\### Resume Bullet Points (Suggested):
+
+
+
+1\. "Built 4-dashboard Power BI solution analyzing customer transactions and segments across multiple regions, delivering actionable insights for revenue optimization and risk management."
+
+
+
+2\. "Developed customer intelligence dashboard with CLV analysis and at-risk identification system, enabling proactive retention strategies for high-value customer segments."
+
+
+
+3\. "Created ML-integrated anomaly detection dashboard with automated risk flagging and severity scoring, reducing manual review time through intelligent data visualization."
+
+
+
+4\. "Designed executive KPI dashboard with time intelligence and trend analysis, providing C-suite visibility into revenue performance across multi-year period."
+
+
+
+5\. "Implemented advanced DAX measures including time intelligence, conditional calculations, and relationship management to support complex business logic across interconnected dashboards."
+
+
+
+6\. "Applied data visualization best practices including semantic color coding, conditional formatting, and responsive slicer design to enhance stakeholder adoption and usability."
+
+
+
+\### Key Technical Skills Demonstrated:
+
+
+
+\*\*Power BI Skills:\*\*
+
+\- Dashboard Development \& Design
+
+\- Advanced DAX (time intelligence, CALCULATE, USERELATIONSHIP, error handling)
+
+\- Data Modeling (star schema, active/inactive relationships)
+
+\- Conditional Formatting \& Visual Design
+
+\- Slicer Configuration \& Cross-filtering
+
+\- Performance Optimization
+
+
+
+\*\*Data Skills:\*\*
+
+\- SQL Database Integration (MySQL)
+
+\- Data Validation \& Quality Assurance
+
+\- ML Model Integration (Python → Power BI)
+
+\- KPI Development \& Business Metrics
+
+\- ETL/Data Preparation
+
+
+
+\*\*Soft Skills:\*\*
+
+\- Business Intelligence \& Strategic Thinking
+
+\- Stakeholder Communication
+
+\- Problem-Solving \& Debugging
+
+\- Documentation \& Knowledge Transfer
+
+\- UX/UI Design Principles
+
+
+
+\### Interview Talking Points:
+
+
+
+\*\*Dashboard 3 Technical Challenge:\*\*
+
+"In the Customer Intelligence dashboard, I encountered a filtering issue where customer counts were significantly lower than expected. Through systematic debugging, I discovered the slicers were pulling from different tables (customers vs customer\_baselines), causing filtering discrepancies. This highlighted the importance of verifying field sources, especially in data models with multiple tables containing similar column names. The fix improved data accuracy and provided a valuable lesson in thorough quality assurance."
+
+
+
+\*\*Design Decision - Fixed vs Dynamic Metrics:\*\*
+
+"I made an intentional design choice to have Cards 1, 2, and 4 show fixed high-value benchmarks while Card 3 (Avg CLV) is interactive. This separation of strategic KPIs (reference benchmarks) vs analytical metrics (comparative analysis) improved usability. Users can now compare different customer segments while maintaining visibility of overall high-value customer performance. This demonstrates understanding of user needs beyond just technical implementation."
+
+
+
+\*\*Conditional Formatting Strategy:\*\*
+
+"Rather than applying extensive conditional formatting to all columns, I took a minimalist approach, limiting it to three key decision-making columns. This reduced visual noise while maintaining actionable highlighting on Customer ID, CLV Score, and Recency Days. The result is a cleaner interface that guides user attention to priority information without overwhelming them with colors."
+
+
+
+---
+
+
+
+\## 📞 PROJECT DOCUMENTATION \& STRUCTURE
+
+
+
+\*\*Project Owner:\*\* \[Your Name]
+
+\*\*Project Duration:\*\* 6 weeks (November 2025)
+
+\*\*Total Dashboards:\*\* 4
+
+\*\*Status:\*\* 75% Complete (3 of 4 dashboards)
+
+
+
+\*\*Related Documentation Files:\*\*
+
+\- Phase\_06\_COMPLETE\_Plan.txt - Detailed technical implementation plan
+
+\- Readme\_PowerBI.md - Project overview and documentation (this file)
+
+\- SalesHealthMonitor\_Theme.json - Custom color theme configuration
+
+\- card\_1\_measures.txt - Dashboard 1 DAX measures reference
+
+\- views.txt - SQL views for Power BI data integration
+
+
+
+\*\*Project Repository Structure:\*\*
+
+```
+
+Sales-Health-Monitor/
+
+├── Phase\_06\_PowerBI/
+
+│   ├── SalesHealthMonitor.pbix (Power BI file)
+
+│   ├── Readme\_PowerBI.md (this documentation)
+
+│   ├── Phase\_06\_COMPLETE\_Plan.txt (detailed plan)
+
+│   ├── SalesHealthMonitor\_Theme.json (theme file)
+
+│   └── documentation/
+
+│       ├── Dashboard\_Screenshots/
+
+│       ├── DAX\_Measures/
+
+│       └── User\_Guide.md (to be created)
+
+├── Data/
+
+│   ├── sales\_transactions.csv
+
+│   ├── customers.csv
+
+│   ├── products.csv
+
+│   ├── regions.csv
+
+│   ├── customer\_baselines.csv
+
+│   └── customer\_anomalies\_test.csv
+
+└── MySQL\_Integration/
+
+&nbsp;   └── views.sql (database views)
+
+```
+
+
+
+---
+
+
+
+\## 🏆 SUCCESS METRICS \& VALIDATION
+
+
+
+\*\*Technical Success Criteria:\*\*
+
+✅ All data sources imported correctly (8 tables)
+
+✅ Relationships configured properly (7 active, 1 inactive)
+
+✅ No DAX errors or warnings in any measure
+
+✅ All visuals load within acceptable timeframe (< 2 seconds)
+
+✅ Slicers cross-filter correctly across all visuals
+
+✅ Color scheme consistent across all dashboards
+
+⏳ Mobile-responsive layouts configured (Week 6)
+
+⏳ Data refresh schedule set up (Week 6)
+
+
+
+\*\*Business Success Criteria:\*\*
+
+✅ Dashboard answers key business questions:
+
+&nbsp; - What is current revenue performance?
+
+&nbsp; - Where are operational anomalies occurring?
+
+&nbsp; - Which customers are at risk of churn?
+
+&nbsp; - Who are the most valuable customers?
+
+&nbsp; - What is average customer lifetime value?
+
+&nbsp; - How are customers distributed across segments and tiers?
+
+⏳ Stakeholder approval and sign-off (Week 6)
+
+⏳ User training completed (Week 6)
+
+⏳ Documentation finalized (Week 6)
+
+
+
+\*\*Portfolio Success Criteria:\*\*
+
+✅ Professional appearance matching corporate design standards
+
+✅ Demonstrates advanced technical skills (DAX, modeling, visualization)
+
+✅ Shows business acumen (relevant KPIs, actionable insights)
+
+✅ Tells cohesive story across multiple dashboards
+
+⏳ High-quality screenshots captured for portfolio (Week 6)
+
+⏳ Project write-up completed (Week 6)
+
+⏳ Published on portfolio website (Week 6)
+
+
+
+---
+
+
+
+\## 📊 PROJECT COMPLETION SUMMARY
+
+
+
+\*\*Current Status: 75% COMPLETE (3 of 4 dashboards)\*\*
+
+
+
+\*\*Completed Work:\*\*
+
+\- Dashboard 1, 2, and 3 fully built and tested
+
+\- 26 visuals created across 3 dashboards
+
+\- 10+ DAX measures developed
+
+\- Data model established with 8 tables and 8 relationships
+
+\- Design system implemented consistently
+
+\- Color palette and formatting standards applied
+
+\- Cross-dashboard testing completed for Dashboards 1-3
+
+\- Technical challenges resolved (slicer filtering, relationship management)
+
+\- Estimated 40+ project hours invested
+
+
+
+\*\*Remaining Work:\*\*
+
+\- Dashboard 4: Product Performance Analytics (Week 5)
+
+\- Final comprehensive testing and QA (Week 6)
+
+\- DAX measure documentation (Week 6)
+
+\- User guide creation with screenshots (Week 6)
+
+\- Stakeholder presentation and approval (Week 6)
+
+\- Deployment to Power BI Service (Week 6)
+
+\- Portfolio screenshots and project write-up (Week 6)
+
+
+
+\*\*Estimated Completion Date:\*\* End of Week 6 (Late November 2025)
+
+
+
+\*\*Key Achievements:\*\*
+
+\- Integrated ML model outputs (anomaly detection) with interactive dashboards
+
+\- Built actionable customer retention system with priority-sorted action list
+
+\- Created executive-ready KPI visualizations with time-series analysis
+
+\- Demonstrated advanced DAX techniques (time intelligence, relationship management, error handling)
+
+\- Maintained consistent design system across multiple dashboard purposes
+
+\- Resolved complex technical challenges through systematic debugging
+
+\- Delivered dashboards tailored to distinct user personas (executives, operations, marketing)
+
+
+
+---
+
+
 
 =============================================================
-IMPLEMENTATION ROADMAP
-===
 
-WEEK 1: Foundation Setup
-Phase: Planning \& Infrastructure
-├── \[✅] Task 1.1: Create 4 blank Power BI report pages
-├── \[✅] Task 1.2: Configure global theme (colors, fonts)
-├── \[✅] Task 1.3: Set up navigation buttons \& bookmarks
-└── \[✅] Task 1.4: Test DirectQuery performance
+END OF DOCUMENT
 
-WEEK 2: Executive Overview Dashboard
-Phase: Dashboard 1 Development
-├── \[✅] Task 2.1: Create 8 KPI cards
-│ ├── Total Active Alerts
-│ ├── Projected Annual Revenue
-│ ├── Average Customer Health
-│ └── Critical Health Customers
-├── \[✅] Task 2.2: Build alert severity donut chart
-├── \[✅] Task 2.3: Create revenue trend line chart
-├── \[✅] Task 2.4: Add regional bar chart
-├── \[✅] Task 2.5: Create performance gauge
-├── \[✅] Task 2.6: Add date range slicer
-├── \[✅] Task 2.7: Implement drill-through to Dashboard 2
-└── \[✅] Task 2.8: Test interactivity \& performance
 
-WEEK 3: Alert Monitor Dashboard
-Phase: Dashboard 2 Development
-├── \[✅] Task 3.1: Build alert details table
-├── \[✅] Task 3.2: Create alert trends stacked bar chart
-├── \[✅] Task 3.3: Add anomaly treemap
-├── \[✅ ] Task 3.4: Build customer risk scatter plot
-├── \[✅ ] Task 3.5: Create regional alert heatmap
-├── \[✅] Task 3.6: Add anomaly trend comparison
-├── \[✅] Task 3.7: Implement multi-select filters
-├── \[✅] Task 3.8: Set up drill-through to Dashboard 3
-└── \[✅] Task 3.9: Test performance \& filtering
 
-WEEK 4: Customer Intelligence Dashboard
-Phase: Dashboard 3 Development
-├── \[ ] Task 4.1: Create customer KPI cards (3 metrics)
-├── \[ ] Task 4.2: Build value tier funnel chart
-├── \[ ] Task 4.3: Create health score waterfall chart
-├── \[ ] Task 4.4: Add segment x value matrix
-├── \[ ] Task 4.5: Build RFM scatter plot
-├── \[ ] Task 4.6: Create at-risk customer table
-├── \[ ] Task 4.7: Add acquisition vs churn line chart
-├── \[ ] Task 4.8: Implement drill-through to transaction details
-└── \[ ] Task 4.9: Test all calculations \& data accuracy
+Document Version: 1.2 UPDATED
 
-WEEK 5: Geographic \& Product Dashboard
-Phase: Dashboard 4 Development
-├── \[ ] Task 5.1: Create revenue map visualization
-├── \[ ] Task 5.2: Build top regions column chart
-├── \[ ] Task 5.3: Add regional trends line chart
-├── \[ ] Task 5.4: Create category seasonality chart
-├── \[ ] Task 5.5: Build category x region matrix
-├── \[ ] Task 5.6: Add leading region KPI cards
-├── \[ ] Task 5.7: Create daily patterns area chart
-├── \[ ] Task 5.8: Add revenue mix donut chart
-└── \[ ] Task 5.9: Test all filters \& drill-throughs
+Last Updated: November 20, 2025, 22:18 IST
 
-WEEK 6: Integration, Testing \& Optimization
-Phase: Final Assembly \& Quality Assurance
-├── \[ ] Task 6.1: Test cross-dashboard navigation
-├── \[ ] Task 6.2: Optimize DAX queries
-├── \[ ] Task 6.3: Validate calculations vs MySQL
-├── \[ ] Task 6.4: Test on different screen sizes
-├── \[ ] Task 6.5: Perform user acceptance testing
-├── \[ ] Task 6.6: Make final design adjustments
-├── \[ ] Task 6.7: Create technical documentation
-└── \[ ] Task 6.8: Prepare presentation materials
+Next Update: After Dashboard 4 completion (Week 5)
+
+Maintained by: Project Owner
+
+
+
+For questions or clarifications, refer to:
+
+\- Phase\_06\_COMPLETE\_Plan.txt (detailed implementation guide)
+
+\- Power BI file: SalesHealthMonitor.pbix
+
+\- Project repository structure (see above)
 
 =============================================================
-PROGRESS TRACKING CHECKLIST
-===
 
-SECTION 1: Dashboard Planning \& Architecture
-Planning Phase:
-✅ Business questions framework defined (10 questions)
-✅ Dashboard architecture designed (4 dashboards)
-✅ Data sources mapped
-✅ Navigation flow designed
-✅ Design specifications documented
-🔄 Approval from stakeholder (PENDING)
-⏳ Detailed build instructions (PENDING)
 
-SECTION 2: Executive Overview Dashboard
-✅ Foundation setup (Page creation, theme)
-✅ KPI cards (8 metrics)
-✅ Alert severity visualization
-✅ Revenue performance charts
-✅ Performance gauge
-✅ Interactivity \& filters
-✅ Quality assurance
-
-SECTION 3: Alert Monitor Dashboard
-✅ Alert management table
-✅ Regional alert heatmap
-✅ Trend analysis charts
-✅ Risk analysis visualizations
-✅ Filtering system
-✅ Drill-through setup
-✅ Quality assurance
-
-SECTION 4: Customer Intelligence Dashboard
-⏳ Customer KPI cards
-⏳ Value tier funnel
-⏳ Health score waterfall
-⏳ Segmentation matrix
-⏳ RFM analysis
-⏳ At-risk customer table
-⏳ Trend analysis
-⏳ Quality assurance
-
-SECTION 5: Geographic \& Product Performance Dashboard
-⏳ Revenue map
-⏳ Regional performance charts
-⏳ Category analysis
-⏳ Product matrix
-⏳ Temporal patterns
-⏳ Filtering system
-⏳ Quality assurance
-
-SECTION 6: Integration \& Testing
-⏳ Cross-dashboard navigation
-⏳ Performance optimization
-⏳ Data accuracy validation
-⏳ Responsive design testing
-⏳ User acceptance testing
-⏳ Documentation
-⏳ Presentation materials
-
-=============================================================
-SUCCESS METRICS
-===
-
-QUANTITATIVE METRICS:
-Target: All 4 dashboards built and functional
-├── Dashboard 1: Executive Overview ⏳
-├── Dashboard 2: Alert Monitor ⏳
-├── Dashboard 3: Customer Intelligence ⏳
-└── Dashboard 4: Geographic \& Product Performance ⏳
-
-Target: 30+ visualizations created
-├── Dashboard 1: 10 visualizations ⏳
-├── Dashboard 2: 8 visualizations ⏳
-├── Dashboard 3: 9 visualizations ⏳
-└── Dashboard 4: 10 visualizations ⏳
-
-Target: DirectQuery response time < 3 seconds per visual
-└── Status: ⏳ (will test during build)
-
-Target: 100% data accuracy validation
-└── Status: ⏳ (will cross-check with MySQL)
-
-QUALITATIVE METRICS:
-✅ Answers all 10 business questions
-✅ Answers 10 business questions dynamically (no hardcoded values)
-✅ Intuitive navigation (no training needed)
-✅ Professional design (portfolio showcase quality)
-✅ Clear data storytelling
-✅ Scalable with future data changes
-
-=============================================================
-DELIVERABLES
-===
-
-AFTER PHASE 6 COMPLETION, YOU WILL HAVE:
-
-1. Power BI Dashboard System (Main Deliverable)
-   ├── 4 interconnected report pages
-   ├── 30+ professional visualizations
-   ├── DirectQuery connection to MySQL
-   └── Role-based views for different stakeholders
-2. Technical Documentation
-   ├── Dashboard architecture diagram
-   ├── Data source mappings \& relationships
-   ├── DAX formulas \& calculations
-   ├── Filter hierarchies \& drill-throughs
-   └── Performance optimization notes
-3. Business Intelligence Summary
-   ├── Key insights from each dashboard
-   ├── Recommended actions
-   ├── Strategic recommendations
-   └── ROI of monitoring system
-4. Resume/Interview Presentation Package
-   ├── Project overview slide deck
-   ├── Dashboard screenshots with annotations
-   ├── Business impact summary
-   ├── Technical skills demonstrated
-   └── Future enhancement roadmap
-
-=============================================================
-SKILLS DEMONSTRATED IN PHASE 6
-===
-
-Business Intelligence Skills:
-✅ Translating business requirements into dashboards
-✅ Designing user-centric data visualizations
-✅ Creating role-based analytics views
-✅ Real-time data monitoring design
-✅ KPI \& metric definition
-
-Power BI Skills:
-✅ DirectQuery optimization
-✅ Advanced DAX formulas \& calculations
-✅ Drill-through \& drill-down mechanics
-✅ Conditional formatting \& dynamic visuals
-✅ Responsive dashboard design
-✅ Bookmarks \& navigation buttons
-✅ Multi-page report structure
-
-Data Visualization Skills:
-✅ Chart type selection for different questions
-✅ Color scheme \& accessibility
-✅ Visual hierarchy \& information design
-✅ Interactive elements \& filters
-✅ Performance optimization
-
-Technical Skills:
-✅ SQL integration (MySQL queries)
-✅ Data modeling in Power BI
-✅ Query optimization
-✅ API connectivity (DirectQuery)
-✅ Version control \& documentation
-
-═════════════════════════════════════════════════════════════════════
-DESIGN SPECIFICATIONS - DARK THEME EDITION
-═════════════════════════════════════════════════════════════════════
-
-Typography (Against Dark Backgrounds):
-
-* Font Family: Segoe UI (default in Power BI)
-* Headers: 18-20pt, bold, #FFFFFF (white, high contrast)
-* Subheaders: 14-16pt, bold, #FFFFFF (white)
-* Body Text: 11-12pt, regular, #FFFFFF (white)
-* Labels: 10-11pt, regular, #B0B0C0 (light gray, slightly dimmed)
-* KPI Numbers: 36pt, bold, #FFFFFF (large, prominent)
-
-Visual Hierarchy (Dark Theme):
-1st Level (Critical) - Top of dashboard
-
-* Most important KPI cards
-* Executive summary metrics
-* Size: Largest (12-16 grid units)
-* Location: Top-left to top-right
-* Background: #1E1E2F with borders #3A3A4F
-* Text: #FFFFFF (white, bold)
-
-2nd Level (Important) - Middle section
-
-* Supporting trend visualizations
-* Secondary metrics
-* Size: Medium (8-10 grid units)
-* Location: Middle of dashboard
-* Background: #1E1E2F
-* Text: #FFFFFF
-
-3rd Level (Reference) - Bottom section
-
-* Detailed tables
-* Supplementary charts
-* Size: Smaller (6-8 grid units)
-* Location: Bottom/sides
-* Background: #1E1E2F
-* Text: #FFFFFF with #B0B0C0 for less important data
-
-Filters \& Slicers (Dark Theme Styling):
-
-* Location: Top-right of each dashboard
-* Type: Dropdown or checkbox (multi-select)
-* Background: #2A2A3F (slightly lighter than canvas for contrast)
-* Header Background: #2A2A3F
-* Text: #FFFFFF (white)
-* Border: #3A3A4F (subtle gray)
-* Order: Date range first, then Region, then Category/Segment
-* Consistency: Same filter placement on all dashboards
-
-=============================================================
-RESUME TALKING POINTS (FROM THIS PHASE)
-===
-
-High-Impact Summary:
-"Designed and developed a 4-dashboard Power BI system connected
-to a MySQL database, creating real-time business intelligence
-for executive, operations, and strategic planning teams. The system
-answers 10 dynamic business questions through 30+ visualizations
-and serves as the core BI platform for sales health monitoring."
-
-Specific Achievements:
-
-1. "Built 4 interconnected dashboards answering specific business
-   questions for different stakeholder groups"
-2. "Implemented DirectQuery architecture for real-time data access
-   to 827,788+ transaction records from MySQL"
-3. "Designed 30+ professional visualizations using best practices
-   in data storytelling and user experience"
-4. "Created dynamic, automation-ready dashboards that adapt to
-   data changes without requiring code modifications"
-5. "Implemented drill-through mechanisms and role-based filtering
-   to enable stakeholder-specific insights"
-
-Interview Question Responses:
-Q: "Tell me about a dashboard you've built"
-A: "I developed a comprehensive 4-page Power BI dashboard system
-that connects live to a MySQL database. It answers 10 core
-business questions through 30+ visualizations, with different
-dashboards optimized for executives, operations teams, and
-strategic planners. The system uses DirectQuery for real-time
-data, has built-in drill-through capabilities, and was
-designed to scale automatically with data growth."
-
-=============================================================
-NEXT STEPS
-===
-
-Immediate Actions:
-
-1. Review this Phase 6 plan
-2. Confirm dashboard architecture aligns with business needs
-3. Get stakeholder approval on questions \& design
-4. Proceed with Week 1 Foundation Setup
-
-Then: 5. Build dashboards following weekly roadmap 6. Test each dashboard before moving to next 7. Document progress in this file 8. Optimize \& test final integration 9. Create presentation materials
-
-=============================================================
-END OF PHASE 6 PLAN
-===
-
-Last Updated: 2025-11-01 22:30 IST
-Status: Dashboard 3 (0%)
-Next Dashboard 3
 
