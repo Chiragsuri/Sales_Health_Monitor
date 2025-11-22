@@ -50,6 +50,8 @@ Multi-dashboard BI system analyzing sales performance, customer behavior, produc
 - Executive summary insights
 - Dynamic time period filtering
 
+![Executive Overview Dashboard](PowerBi_Dashboard/Screenshots/Dashboard1_Executive.png)
+
 ---
 
 ### Dashboard 2: Anomaly & Risk Monitor
@@ -70,6 +72,8 @@ Multi-dashboard BI system analyzing sales performance, customer behavior, produc
 - Automated alert thresholds
 - Customer risk scoring system
 - Drill-through to customer details
+
+![Anomaly & Risk Monitor Dashboard](PowerBi_Dashboard/Screenshots/Dashboard2_Anomaly.png)
 
 ---
 
@@ -93,6 +97,8 @@ Multi-dashboard BI system analyzing sales performance, customer behavior, produc
 - Complex CLV calculations
 - Cohort retention tracking
 - Targeted marketing insights
+
+![Customer Intelligence Dashboard](PowerBi_Dashboard/Screenshots/Dashboard3_Customer.png)
 
 ---
 
@@ -123,6 +129,8 @@ Multi-dashboard BI system analyzing sales performance, customer behavior, produc
 - Text/numeric measure separation pattern
 - Edge case handling (no prior year, "All" filters)
 - Error-proof calculations with ISBLANK logic
+
+![Geographic & Product Performance Dashboard](PowerBi_Dashboard/Screenshots/Dashboard4_Geographic.png)
 
 ---
 

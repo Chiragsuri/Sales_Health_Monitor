@@ -15,12 +15,14 @@ Enterprise-grade MySQL database with **adaptive monitoring** that automatically 
 ### What Makes This Unique
 
 **Traditional systems:**
+
 ```sql
 -- ❌ Breaks when business scales
 IF customer_health_score < 75 THEN alert
 ```
 
 **This system:**
+
 ```sql
 -- ✅ Always relevant
 IF customer IN (bottom 10% of tier) THEN alert
@@ -31,6 +33,7 @@ IF customer IN (bottom 10% of tier) THEN alert
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - MySQL Workbench 8.0+
 - Sales data CSVs from [`/Dataset`](https://github.com/Chiragsuri/Sales_Health_Monitor/tree/main/Dataset)
 
@@ -44,12 +47,13 @@ git clone https://github.com/Chiragsuri/Sales_Health_Monitor.git
 ```
 
 **Execution Order:**
+
 1. `database_setup.sql` - Creates tables and infrastructure
-2. `import_core_data.sql` - Loads transaction data *(update file paths first!)*
-3. `import_ml_baselines.sql` - Loads ML metrics *(if available)*
+2. `import_core_data.sql` - Loads transaction data _(update file paths first!)_
+3. `import_ml_baselines.sql` - Loads ML metrics _(if available)_
 4. `create_foundation_kpi_views.sql` - Creates analytical views
 5. `create_monitoring_procedures.sql` - Installs adaptive monitoring
-6. `validate_eda_insights.sql` - Validates setup *(optional)*
+6. `validate_eda_insights.sql` - Validates setup _(optional)_
 
 ### Verify Installation
 
@@ -69,6 +73,7 @@ CALL sp_monitoring_health_check();
 The system calculates alert thresholds **dynamically** based on your data:
 
 **Critical Alerts (Bottom 1%):**
+
 ```sql
 -- Finds bottom 1% of customers by health score
 SELECT FLOOR(COUNT(*) * 0.01) INTO v_threshold_offset
@@ -78,6 +83,7 @@ FROM customer_baselines;
 **Result:** Always flags the worst 1%, whether you have 100 or 100,000 customers.
 
 **High-Value At Risk (Bottom 10%):**
+
 ```sql
 -- Finds bottom 10% within high-value tier only
 SELECT FLOOR(COUNT(*) * 0.10) INTO v_threshold_offset
@@ -89,11 +95,11 @@ WHERE value_tier IN ('High Value', 'Premium');
 
 ### Why This Matters
 
-| Scenario | Hardcoded (75 threshold) | Adaptive (10th percentile) |
-|----------|--------------------------|----------------------------|
-| **Startup:** 100 customers, avg health = 60 | 90 alerts (noise) | 10 alerts (actionable) |
-| **Growth:** 10K customers, avg health = 65 | 3K alerts (overwhelming) | 1K alerts (manageable) |
-| **Mature:** 100K customers, avg health = 70 | 80K alerts (broken) | 10K alerts (scalable) |
+| Scenario                                    | Hardcoded (75 threshold) | Adaptive (10th percentile) |
+| ------------------------------------------- | ------------------------ | -------------------------- |
+| **Startup:** 100 customers, avg health = 60 | 90 alerts (noise)        | 10 alerts (actionable)     |
+| **Growth:** 10K customers, avg health = 65  | 3K alerts (overwhelming) | 1K alerts (manageable)     |
+| **Mature:** 100K customers, avg health = 70 | 80K alerts (broken)      | 10K alerts (scalable)      |
 
 **Your system adapts automatically - no maintenance needed.**
 
@@ -106,29 +112,32 @@ To change alert volume, edit **percentiles** in `create_monitoring_procedures.sq
 ### Location: `sp_monitor_customer_health()` procedure
 
 **Current (10% = ~1,000 alerts per 10K customers):**
+
 ```sql
 SELECT FLOOR(COUNT(*) * 0.10) INTO v_hv_offset
 ```
 
 **More strict (5% = ~500 alerts):**
+
 ```sql
 SELECT FLOOR(COUNT(*) * 0.05) INTO v_hv_offset
 ```
 
 **Less strict (15% = ~1,500 alerts):**
+
 ```sql
 SELECT FLOOR(COUNT(*) * 0.15) INTO v_hv_offset
 ```
 
 ### Percentile Guide
 
-| Percentile | Alert Volume | Best For |
-|------------|--------------|----------|
-| 1% | Very few | Critical emergencies only |
-| 5% | Low | Important issues |
-| **10%** | **Moderate** | **Standard monitoring (recommended)** |
-| 15% | High | Proactive warnings |
-| 25% | Very high | Comprehensive coverage |
+| Percentile | Alert Volume | Best For                              |
+| ---------- | ------------ | ------------------------------------- |
+| 1%         | Very few     | Critical emergencies only             |
+| 5%         | Low          | Important issues                      |
+| **10%**    | **Moderate** | **Standard monitoring (recommended)** |
+| 15%        | High         | Proactive warnings                    |
+| 25%        | Very high    | Comprehensive coverage                |
 
 ---
 
@@ -149,7 +158,7 @@ SET SQL_SAFE_UPDATES = 1;
 SELECT * FROM v_active_alerts;
 
 -- Alert summary
-SELECT 
+SELECT
     alert_type,
     severity,
     COUNT(*) as count
@@ -172,31 +181,34 @@ CALL sp_monitor_category_performance(); -- Product categories
 ## 📊 Understanding Alerts
 
 ### Critical Health Score
+
 **What:** Customers in bottom 1% of health scores  
-**Action:** Immediate retention intervention  
+**Action:** Immediate retention intervention
 
 ```sql
-SELECT * FROM monitoring_alerts 
-WHERE alert_type = 'critical_health_score' 
+SELECT * FROM monitoring_alerts
+WHERE alert_type = 'critical_health_score'
 AND status = 'new';
 ```
 
 ### High Value At Risk
+
 **What:** Premium customers in bottom 10% of their tier  
-**Action:** Account manager outreach  
+**Action:** Account manager outreach
 
 ```sql
-SELECT 
+SELECT
     entity_id as customer_id,
     current_value as health_score,
     alert_message
-FROM monitoring_alerts 
+FROM monitoring_alerts
 WHERE alert_type = 'high_value_at_risk';
 ```
 
 **Example Alert:**
+
 ```
-High-value in bottom 10%: CUST_047040 
+High-value in bottom 10%: CUST_047040
 (Health: 37.5, CLV: $10,954,941)
 ```
 
@@ -220,8 +232,9 @@ SELECT FLOOR(COUNT(*) * 0.05) INTO v_hv_offset  -- Was 0.10
 ### No Alerts Generated
 
 **Check thresholds are reasonable:**
+
 ```sql
-SELECT 
+SELECT
     monitor_name,
     threshold_lower,
     is_active
@@ -229,9 +242,10 @@ FROM monitoring_config;
 ```
 
 **Re-enable monitors if needed:**
+
 ```sql
-UPDATE monitoring_config 
-SET is_active = TRUE 
+UPDATE monitoring_config
+SET is_active = TRUE
 WHERE is_active = FALSE;
 ```
 
@@ -240,6 +254,7 @@ WHERE is_active = FALSE;
 **File path error:** Update CSV paths in `import_core_data.sql` before running
 
 **Permission error:** Check `secure_file_priv` setting
+
 ```sql
 SHOW VARIABLES LIKE 'secure_file_priv';
 ```
@@ -249,16 +264,18 @@ SHOW VARIABLES LIKE 'secure_file_priv';
 ## 🔄 Maintenance
 
 ### Daily
+
 ```sql
 CALL sp_run_all_monitoring();
 SELECT * FROM v_active_alerts;
 ```
 
 ### Weekly
+
 ```sql
 -- Clean old resolved alerts
-DELETE FROM monitoring_alerts 
-WHERE status = 'resolved' 
+DELETE FROM monitoring_alerts
+WHERE status = 'resolved'
 AND resolved_at < DATE_SUB(CURDATE(), INTERVAL 90 DAY);
 
 -- Optimize tables
@@ -269,7 +286,7 @@ ANALYZE TABLE sales_transactions;
 
 ```sql
 -- Load into main table
-LOAD DATA INFILE '/path/to/new_data.csv' 
+LOAD DATA INFILE '/path/to/new_data.csv'
 INTO TABLE sales_transactions ...;
 
 -- Re-run monitoring
@@ -301,6 +318,7 @@ SELECT * FROM v_monitoring_summary;
 ## 🚀 Next Steps
 
 ### Phase 6: Power BI Integration
+
 1. Connect Power BI to `sales_health_monitor` database
 2. Import views: `v_active_alerts`, `v_geographic_performance`, `v_customer_intelligence`
 3. Build dashboards for alert monitoring and customer health tracking
@@ -319,6 +337,7 @@ SELECT * FROM v_monitoring_summary;
 ✅ Future-proof design (no hardcoded values)
 
 **Portfolio Value:**
+
 - Advanced SQL (stored procedures, dynamic calculations)
 - Enterprise patterns (monitoring, alerting, logging)
 - Performance optimization (indexing, query design)
@@ -328,12 +347,7 @@ SELECT * FROM v_monitoring_summary;
 
 ## 📞 Support
 
-**Issues:** [GitHub Issues](https://github.com/Chiragsuri/Sales_Health_Monitor/issues)  
+**Contact:** [LinkedIn](https://www.linkedin.com/in/chirag-suri/)  
 **Author:** Chirag Suri
-
----
-
-**Status:** Production-Ready ✅  
-**Phase:** 5 Complete
 
 ---
