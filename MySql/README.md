@@ -317,7 +317,7 @@ SELECT * FROM v_monitoring_summary;
 
 ## 🚀 Next Steps
 
-### Phase 6: Power BI Integration
+### Power BI Integration
 
 1. Connect Power BI to `sales_health_monitor` database
 2. Import views: `v_active_alerts`, `v_geographic_performance`, `v_customer_intelligence`
