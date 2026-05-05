@@ -47,9 +47,6 @@ Sales-Health-Monitor/
 │   ├── 02_Data_Cleaning_Validation.ipynb
 │   ├── 03_EDA_Analysis.ipynb
 │   ├── 04_EDA_Advanced_Analysis.ipynb
-│   ├── 05_ML_Anomaly_Detection.ipynb
-│   ├── 06_AI_Text_Insights.ipynb
-│   └── 07_Automation_Alerts.ipynb
 ├── PowerBI_Dashboard/
 └── README.md
 ```
